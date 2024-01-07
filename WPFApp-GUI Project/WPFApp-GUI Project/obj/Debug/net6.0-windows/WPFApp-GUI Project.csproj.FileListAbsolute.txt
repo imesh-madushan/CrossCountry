@@ -1,0 +1,20 @@
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\WPFApp-GUI Project.exe
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\WPFApp-GUI Project.deps.json
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\WPFApp-GUI Project.runtimeconfig.json
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\WPFApp-GUI Project.dll
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\WPFApp-GUI Project.pdb
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project_MarkupCompile.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project_MarkupCompile.lref
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.g.resources
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.AssemblyInfoInputs.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.AssemblyInfo.cs
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.csproj.CoreCompileInputs.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.dll
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\refint\WPFApp-GUI Project.dll
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.pdb
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.genruntimeconfig.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\ref\WPFApp-GUI Project.dll

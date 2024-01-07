@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFApp_GUI_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="780" Width="600">
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#1BFFFF" Offset="1.9"/>
+                <GradientStop Color="#2E3192" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button BoderRadious="3px"  Content="Login" HorizontalAlignment="Center" Margin="0,546,0,0" VerticalAlignment="Top" Height="56" Width="264" FontSize="28" FontWeight="Bold" FontFamily="Malgun Gothic"/>
+        <Button Content="Registor" HorizontalAlignment="Center" Margin="0,629,0,0" VerticalAlignment="Top" Height="56" Width="264" FontSize="28" FontWeight="Bold" FontFamily="Malgun Gothic"/>
 
     </Grid>
 </Window>
