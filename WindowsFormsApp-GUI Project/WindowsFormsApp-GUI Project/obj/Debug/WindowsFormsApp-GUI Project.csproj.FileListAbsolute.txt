@@ -1,0 +1,10 @@
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\bin\Debug\WindowsFormsApp-GUI Project.exe.config
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\bin\Debug\WindowsFormsApp-GUI Project.exe
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\bin\Debug\WindowsFormsApp-GUI Project.pdb
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp-GUI Project.csproj.AssemblyReference.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp_GUI_Project.Properties.Resources.resources
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp-GUI Project.csproj.GenerateResource.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp-GUI Project.csproj.CoreCompileInputs.cache
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp-GUI Project.exe
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp-GUI Project.pdb
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WindowsFormsApp-GUI Project\WindowsFormsApp-GUI Project\obj\Debug\WindowsFormsApp_GUI_Project.formLogin.resources
