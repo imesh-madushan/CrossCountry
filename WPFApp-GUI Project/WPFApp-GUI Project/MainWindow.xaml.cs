@@ -18,11 +18,26 @@ namespace WPFApp_GUI_Project
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
+        string usename;
+        string password;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            usename = textBoxUsername.Text;
+            password = passwordBoxPassword.Password;
+
+        }
+        private void buttonRegistor_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(usename + password);
         }
     }
 }
