@@ -3,24 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="635" Width="1038" ResizeMode="NoResize">
 
-    <Window.Resources>
-    </Window.Resources>
-
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.5,0">
                 <GradientStop Color="#1BFFFF" Offset="1.9"/>
-                <GradientStop Color="#2E3192" Offset="0"/>
+                <GradientStop Color="#FFCBB6AC" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Button x:Name="buttonRegistor" Content="Register" Style="{StaticResource RoundedButtonStyle}" Margin="682,0,0,93" Background="White" Foreground="Black" FontSize="28" FontFamily="Malgun Gothic" FontWeight="Bold"  Click="buttonRegistor_Click" Height="52" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="220"/>
-        <Button x:Name="buttonLogin" Content="Login" Style="{StaticResource RoundedButtonStyle}" Margin="682,310,0,0" Background="White" Foreground="Black" FontSize="28" FontFamily="Malgun Gothic" FontWeight="Bold" Click="buttonLogin_Click" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" />
+        <Button x:Name="buttonRegistor" Content="Register"  Margin="682,0,0,93" Background="White" Foreground="Black" FontSize="28" FontFamily="Malgun Gothic" FontWeight="Bold"  Click="buttonRegistor_Click" Height="52" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="220"/>
+        <Button x:Name="buttonLogin" Content="Login"  Margin="682,310,0,0" Background="White" Foreground="Black" FontSize="28" FontFamily="Malgun Gothic" FontWeight="Bold" Click="buttonLogin_Click" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" />
         <Label Content="Username" HorizontalAlignment="Left" Margin="507,147,0,0" FontSize="28" FontWeight="Bold" Width="142" Height="70" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="507,222,0,0" FontSize="28" FontWeight="Bold" Width="134" Height="85" VerticalAlignment="Top"/>
         <Label Content="OR" Margin="776,407,0,0" FontSize="28" FontWeight="Bold" Height="85" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134"/>
-        <TextBox x:Name="textBoxUsername" Style="{StaticResource RoundTextBox}" Margin="657,149,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="270" Height="47" VerticalAlignment="Top" FontSize="26"/>
-        <PasswordBox x:Name="passwordBoxPassword" Style="{StaticResource RoundPasswordBox}" HorizontalAlignment="Left" Margin="657,222,0,0" VerticalAlignment="Top" Width="270" Height="47" FontSize="26"/>
+        <TextBox x:Name="textBoxUsername" Style="{StaticResource RoundTextBoxStyle}" Margin="657,149,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="270" Height="47" VerticalAlignment="Top" FontSize="26"/>
+        <PasswordBox x:Name="passwordBoxPassword" Style="{StaticResource RoundedPasswordBoxStyle}" HorizontalAlignment="Left" Margin="657,222,0,0" VerticalAlignment="Top" Width="270" Height="47" FontSize="26"/>
 
     </Grid>
 </Window>

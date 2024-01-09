@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="220391.jpg" />
+    <None Remove="sample.jpg" />
+    <None Remove="wp8994765-dark-batman-4k-wallpapers.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="220391.jpg" />
+    <Resource Include="sample.jpg" />
+    <Resource Include="wp8994765-dark-batman-4k-wallpapers.jpg" />
+  </ItemGroup>
+
 </Project>
