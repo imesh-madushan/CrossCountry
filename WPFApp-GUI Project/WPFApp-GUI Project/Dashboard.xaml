@@ -8,7 +8,7 @@
         Title="Dashboard"
         ResizeMode="CanResizeWithGrip"
         
-        Height="720" Width="1080" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+        Height="630" Width="980" WindowStartupLocation="CenterScreen" Background="{x:Null}">
     <Border Background="White" CornerRadius="20">
         <Grid>
             <Grid>
@@ -30,27 +30,27 @@
                         </StackPanel>
 
                         <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
-                            <Button Margin="-10,28,0,0" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonHistpry_MouseEnter" MouseLeave="buttonHistpry_MouseLeave" Width="158">
-                                <StackPanel Orientation="Horizontal" Width="113">
-                                    <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
-                                    <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
-                                </StackPanel>
-                            </Button>
-                            <Button Margin="-10,16,0,0" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonCart_MouseEnter" MouseLeave="buttonCart_MouseLeave" Width="158">
-                                <StackPanel Orientation="Horizontal" Width="113">
-                                    <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
-                                    <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
-                                </StackPanel>
-                            </Button>
-                            <Button Margin="-10,16,0,0" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonProfileSetting_MouseEnter" MouseLeave="buttonProfileSetting_MouseLeave" Width="158">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonProfileSetting_MouseEnter" MouseLeave="buttonProfileSetting_MouseLeave" Width="158" Margin="-7,30,0,0">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
                                 </StackPanel>
                             </Button>
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonHistpry_MouseEnter" MouseLeave="buttonHistpry_MouseLeave" Width="158" Margin="-7,15,0,0">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonCart_MouseEnter" MouseLeave="buttonCart_MouseLeave" Width="158" Margin="-7,15,0,0">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
                         </StackPanel>
 
-                        <Button x:Name="buttonLogOut" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="3,5,2,12" MouseEnter="buttonLogOut_MouseEnter" MouseLeave="buttonLogOut_MouseLeave">
+                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="buttonLogOut_MouseEnter" MouseLeave="buttonLogOut_MouseLeave">
                             <StackPanel Orientation="Horizontal" Width="113">
                                 <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
                                 <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
@@ -59,44 +59,156 @@
                     </Grid>
                 </Border>
             </Grid>
-            <ScrollViewer Margin="163,0,0,0">
-                <WrapPanel >
-                    <WrapPanel.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0.336"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </WrapPanel.RenderTransform>
-                    <Grid Height="200" Width="220">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="189*"/>
-                            <RowDefinition Height="11*"/>
-                        </Grid.RowDefinitions>
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Center" Width="184" Source="/sample.jpg"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+
+            <ScrollViewer Margin="163,17,0,23">
+                
+            <WrapPanel Width="1080" >
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="218" Source="/s (9).jpg" Margin="0,0,0,24" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Bottom"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-                    <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="216" Source="/s (17).jpg" Margin="0,7,0,0" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="158" VerticalAlignment="Top"/>
+                        <Button x:Name="buttonBuy1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-                    <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="218" Source="/s (6).jpg" Margin="0,0,0,24" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Bottom"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-                    <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="218" Source="/s (7).jpg" Margin="0,-6,0,0" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Top"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-                    <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="210" Source="/s (14).jpg" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Height="118" VerticalAlignment="Top" Margin="0,42,0,0">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-                    <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    <Grid Height="190" Width="270">
+                        <Image Source="/s (27).jpg" Margin="29,0,47,19" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="187" VerticalAlignment="Bottom">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="6.356"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="193" Source="/s (39).jpg" Margin="28,31,0,0" RenderTransformOrigin="0.5,0.5" Height="184" VerticalAlignment="Top"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="222" Source="/s (10).jpg" Margin="26,0,0,12" RenderTransformOrigin="0.5,0.5" Height="195" VerticalAlignment="Bottom" Stretch="UniformToFill"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="198" Source="/s (33).jpg" Margin="32,32,0,0" RenderTransformOrigin="0.5,0.5" Height="166" VerticalAlignment="Top"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="230" Source="/s (70).jpg" Margin="18,0,0,-6" RenderTransformOrigin="0.5,0.5" Height="226" VerticalAlignment="Bottom" Stretch="UniformToFill"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="263" Source="/s (67).jpg" Margin="16,0,0,12" RenderTransformOrigin="0.543,0.277" Height="196" VerticalAlignment="Bottom">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="254" Source="/s (64).jpg" Margin="22,0,0,1" RenderTransformOrigin="0.5,0.5" Height="218" VerticalAlignment="Bottom"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="237" Source="/s (72).jpg" Margin="29,0,0,8" RenderTransformOrigin="0.5,0.5" Height="213" VerticalAlignment="Bottom">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="256" Source="/s (66).jpg" Margin="22,0,0,-11" RenderTransformOrigin="0.5,0.5" Height="224" VerticalAlignment="Bottom"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Center" Width="214" Source="/s (38).jpg" Margin="0,27,0,0" RenderTransformOrigin="0.5,0.5" Height="131" VerticalAlignment="Top">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="203" Source="/s (51).jpg" Margin="36,0,0,40" RenderTransformOrigin="0.5,0.5" Height="182" VerticalAlignment="Bottom"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="264" Source="/s (62).jpg" Margin="20,0,0,2" RenderTransformOrigin="0.5,0.5" Height="229" VerticalAlignment="Bottom">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Grid Height="190" Width="270">
+                        <Image HorizontalAlignment="Left" Width="288" Source="/s (31).jpg" RenderTransformOrigin="0.5,0.5" Height="242" VerticalAlignment="Top" Margin="-7,-14,0,0"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
+                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
+                    </Grid>
+
+
                 </WrapPanel>
             </ScrollViewer>
         </Grid>
