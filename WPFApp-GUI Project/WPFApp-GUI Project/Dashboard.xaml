@@ -8,8 +8,8 @@
         Title="Dashboard"
         ResizeMode="CanResizeWithGrip"
         
-        Height="630" Width="980" WindowStartupLocation="CenterScreen" Background="{x:Null}">
-    <Border Background="White" CornerRadius="20">
+        Height="630" Width="1005" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+    <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -60,9 +60,8 @@
                 </Border>
             </Grid>
 
-            <ScrollViewer Margin="163,17,0,23">
-                
-            <WrapPanel Width="1080" >
+            <ScrollViewer Margin="163,17,0,14">
+                <WrapPanel>
                     <Grid Height="190" Width="270">
                         <Image HorizontalAlignment="Center" Width="218" Source="/s (9).jpg" Margin="0,0,0,24" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
@@ -122,7 +121,7 @@
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
                     <Grid Height="190" Width="270">
-                        <Image HorizontalAlignment="Left" Width="198" Source="/s (33).jpg" Margin="32,32,0,0" RenderTransformOrigin="0.5,0.5" Height="166" VerticalAlignment="Top"/>
+                        <Image HorizontalAlignment="Left" Width="198" Source="/s (33).jpg" Margin="30,32,0,0" RenderTransformOrigin="0.5,0.5" Height="166" VerticalAlignment="Top"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
@@ -146,7 +145,7 @@
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
                     <Grid Height="190" Width="270">
-                        <Image HorizontalAlignment="Left" Width="254" Source="/s (64).jpg" Margin="22,0,0,1" RenderTransformOrigin="0.5,0.5" Height="218" VerticalAlignment="Bottom"/>
+                        <Image HorizontalAlignment="Left" Width="254" Source="/s (64).jpg" Margin="20,0,0,1" RenderTransformOrigin="0.5,0.5" Height="218" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
@@ -170,7 +169,7 @@
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
                     <Grid Height="190" Width="270">
-                        <Image HorizontalAlignment="Center" Width="214" Source="/s (38).jpg" Margin="0,27,0,0" RenderTransformOrigin="0.5,0.5" Height="131" VerticalAlignment="Top">
+                        <Image HorizontalAlignment="Left" Width="214" Source="/s (38).jpg" Margin="26,27,0,0" RenderTransformOrigin="0.5,0.5" Height="131" VerticalAlignment="Top">
                             <Image.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform ScaleX="-1"/>
@@ -203,12 +202,10 @@
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
                     <Grid Height="190" Width="270">
-                        <Image HorizontalAlignment="Left" Width="288" Source="/s (31).jpg" RenderTransformOrigin="0.5,0.5" Height="242" VerticalAlignment="Top" Margin="-7,-14,0,0"/>
+                        <Image HorizontalAlignment="Left" Width="314" Source="/s (31).jpg" RenderTransformOrigin="0.5,0.5" Margin="-34,0,0,0" Height="210" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top"/>
                     </Grid>
-
-
                 </WrapPanel>
             </ScrollViewer>
         </Grid>
