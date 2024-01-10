@@ -10,14 +10,30 @@
 
   <ItemGroup>
     <None Remove="220391.jpg" />
+    <None Remove="exit.png" />
     <None Remove="sample.jpg" />
+    <None Remove="user %281%29.png" />
+    <None Remove="user %282%29.png" />
+    <None Remove="user %283%29.png" />
+    <None Remove="user%285%29.png" />
+    <None Remove="user.png" />
+    <None Remove="user6.png" />
+    <None Remove="userProfile1.png" />
     <None Remove="wp8994765-dark-batman-4k-wallpapers.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="220391.jpg" />
+    <Resource Include="exit.png" />
     <Resource Include="sample.jpg" />
+    <Resource Include="user.png" />
+    <Resource Include="user6.png" />
+    <Resource Include="userProfile1.png" />
     <Resource Include="wp8994765-dark-batman-4k-wallpapers.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Icons\" />
   </ItemGroup>
 
 </Project>

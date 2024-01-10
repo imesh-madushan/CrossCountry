@@ -15,47 +15,57 @@
                     <ColumnDefinition Width="160"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Border CornerRadius="20" Background="#623ed0">
-                    <DockPanel>
-
-                    </DockPanel>
+                <Border x:Name="borderSideBar" CornerRadius="20" Background="#623ed0">
+                    <Grid>
+                        <Ellipse Width="64" Height="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,23,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/user6.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Button Background="{x:Null}" Height="48" VerticalAlignment="Bottom" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" Width="113">
+                                <Image Source="exit.png" Width="30"/>
+                                <TextBlock Text="Logout" FontSize="17" Width="65" FontFamily="Lucida Sans Typewriter" Height="21"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
                 </Border>
             </Grid>
-            <ScrollViewer>
-            <WrapPanel Margin="382,-12,249,94">
-                <WrapPanel.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.336"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </WrapPanel.RenderTransform>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-                <Grid Height="200" Width="220">
-                    <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
-                    <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
-                </Grid>
-            </WrapPanel>
+            <ScrollViewer Margin="175,0,0,0">
+                <WrapPanel >
+                    <WrapPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.336"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </WrapPanel.RenderTransform>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                    <Grid Height="200" Width="220">
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
+                    </Grid>
+                </WrapPanel>
             </ScrollViewer>
         </Grid>
     </Border>
