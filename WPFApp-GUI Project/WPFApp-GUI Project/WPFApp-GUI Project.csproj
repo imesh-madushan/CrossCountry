@@ -11,7 +11,11 @@
   <ItemGroup>
     <None Remove="220391.jpg" />
     <None Remove="exit.png" />
+    <None Remove="exit2.png" />
+    <None Remove="grocery-store.png" />
+    <None Remove="history1.png" />
     <None Remove="sample.jpg" />
+    <None Remove="settings2.png" />
     <None Remove="user %281%29.png" />
     <None Remove="user %282%29.png" />
     <None Remove="user %283%29.png" />
@@ -26,7 +30,11 @@
   <ItemGroup>
     <Resource Include="220391.jpg" />
     <Resource Include="exit.png" />
+    <Resource Include="exit2.png" />
+    <Resource Include="grocery-store.png" />
+    <Resource Include="history1.png" />
     <Resource Include="sample.jpg" />
+    <Resource Include="settings2.png" />
     <Resource Include="user.png" />
     <Resource Include="user4.png" />
     <Resource Include="user6.png" />

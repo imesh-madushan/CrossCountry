@@ -25,17 +25,35 @@
                     </Border.Background>
                     <Grid>
                         <StackPanel Orientation="Vertical">
-                            <Ellipse Width="64" Height="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,27,0,0">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="/user4.png"/>
-                                </Ellipse.Fill>
-                            </Ellipse>
-                            <Label x:Name="lableUsername" Margin="10, 7" HorizontalAlignment="Left" VerticalAlignment="Top"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
+                            <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="user4.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
+                            <Label x:Name="lableUsername" Margin="18,14,14,14" HorizontalAlignment="Left"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
                         </StackPanel>
-                        <Button VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}">
+
+                        <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
+                            <Button Margin="-10,28,0,0" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonHistpry_MouseEnter" MouseLeave="buttonHistpry_MouseLeave" Width="158">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Margin="-10,16,0,0" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonCart_MouseEnter" MouseLeave="buttonCart_MouseLeave" Width="158">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Margin="-10,16,0,0" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" MouseEnter="buttonProfileSetting_MouseEnter" MouseLeave="buttonProfileSetting_MouseLeave" Width="158">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <Button x:Name="buttonLogOut" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="3,5,2,12" MouseEnter="buttonLogOut_MouseEnter" MouseLeave="buttonLogOut_MouseLeave">
                             <StackPanel Orientation="Horizontal" Width="113">
-                                <Image Source="exit.png" Width="30" Margin="0,0,10,0"/>
-                                <TextBlock Text="Logout" FontSize="17" Width="65" Height="21" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
+                                <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
                             </StackPanel>
                         </Button>
                     </Grid>
@@ -52,7 +70,11 @@
                         </TransformGroup>
                     </WrapPanel.RenderTransform>
                     <Grid Height="200" Width="220">
-                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="184" Source="/sample.jpg" Margin="0,34,0,0"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="189*"/>
+                            <RowDefinition Height="11*"/>
+                        </Grid.RowDefinitions>
+                        <Image HorizontalAlignment="Center" Height="120" VerticalAlignment="Center" Width="184" Source="/sample.jpg"/>
                         <Button Content="Buy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,147,0,0" Width="94" Height="28"/>
                     </Grid>
                     <Grid Height="200" Width="220">

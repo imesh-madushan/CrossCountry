@@ -23,5 +23,69 @@ namespace WPFApp_GUI_Project
         {
             InitializeComponent();
         }
+
+        private void buttonLogOut_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = new SolidColorBrush(Color.FromArgb(160, 255, 20, 2));
+            }
+        }
+
+        private void buttonLogOut_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.Transparent;
+            }
+        }
+
+        private void buttonProfileSetting_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.Background = Brushes.LightBlue;
+            }
+        }
+
+        private void buttonProfileSetting_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.Transparent;
+            }
+        }
+
+        private void buttonCart_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.Background = Brushes.LightBlue;
+            }
+        }
+
+        private void buttonCart_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.Background = Brushes.Transparent;
+            }
+        }
+
+        private void buttonHistpry_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.Background = Brushes.LightBlue;
+            }
+        }
+
+        private void buttonHistpry_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.Background = Brushes.Transparent;
+            }
+        }
     }
 }
