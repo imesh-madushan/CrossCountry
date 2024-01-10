@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Dashboard"
         ResizeMode="CanResizeWithGrip"
+        
         Height="720" Width="1080" WindowStartupLocation="CenterScreen" Background="{x:Null}">
     <Border Background="White" CornerRadius="20">
         <Grid>
@@ -15,23 +16,32 @@
                     <ColumnDefinition Width="160"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Border x:Name="borderSideBar" CornerRadius="20" Background="#623ed0">
+                <Border x:Name="borderSideBar" CornerRadius="20">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2CBA8C"/>
+                            <GradientStop Color="#FF7E89C5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
                     <Grid>
-                        <Ellipse Width="64" Height="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,23,0,0">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="/user6.png"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <Button Background="{x:Null}" Height="48" VerticalAlignment="Bottom" BorderBrush="{x:Null}">
+                        <StackPanel Orientation="Vertical">
+                            <Ellipse Width="64" Height="63" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,27,0,0">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="/user4.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Label x:Name="lableUsername" Margin="10, 7" HorizontalAlignment="Left" VerticalAlignment="Top"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
+                        </StackPanel>
+                        <Button VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}">
                             <StackPanel Orientation="Horizontal" Width="113">
-                                <Image Source="exit.png" Width="30"/>
-                                <TextBlock Text="Logout" FontSize="17" Width="65" FontFamily="Lucida Sans Typewriter" Height="21"/>
+                                <Image Source="exit.png" Width="30" Margin="0,0,10,0"/>
+                                <TextBlock Text="Logout" FontSize="17" Width="65" Height="21" FontFamily="Segoe UI Variable Small Semibold"/>
                             </StackPanel>
                         </Button>
                     </Grid>
                 </Border>
             </Grid>
-            <ScrollViewer Margin="175,0,0,0">
+            <ScrollViewer Margin="163,0,0,0">
                 <WrapPanel >
                     <WrapPanel.RenderTransform>
                         <TransformGroup>
