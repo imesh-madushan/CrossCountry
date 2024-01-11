@@ -1,12 +1,57 @@
 ﻿<Window x:Class="WPFApp_GUI_Project.RegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFApp_GUI_Project"
-        mc:Ignorable="d"
-        Title="RegisterWindow" Height="450" Width="800">
+        Title="RegisterWindow" Height="620" Width="930" ResizeMode="NoResize"
+        Background="{x:Null}"  WindowStartupLocation="CenterScreen">
+
+
     <Grid>
-        
+        <Border CornerRadius="30" Background="White"/>
+        <Grid>
+            <Border CornerRadius="30" HorizontalAlignment="Left" Width="647">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2CBA8C"/>
+                        <GradientStop Color="#FF7E89C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel Orientation="Vertical" Margin="51,34,318,78">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Name" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Age" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Add" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Username" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Password" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label  Content="Country" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
+                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave" MaxLines="2147483645"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="12,417,283,0">
+                <Button x:Name="buttonRegistor" Content="Registor" Style="{StaticResource RoundedButtonLogStyle}" Background="White" Foreground="Black" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Height="50" Width="160" BorderBrush="{x:Null}" MouseEnter="buttonRegistor_MouseEnter" MouseLeave="buttonRegistor_MouseLeave" />
+                <Label  HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Back to" FontSize="24" FontWeight="Bold" Height="60" Width="113" Foreground="White" FontFamily="Calibri"/>
+                <Button x:Name="buttonLogin" Content="Login" Style="{StaticResource RoundedButtonLogStyle}" Background="White" Foreground="Black" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Height="50" Width="160" BorderBrush="{x:Null}" MouseEnter="buttonLogin_MouseEnter" MouseLeave="buttonLogin_MouseLeave" />
+            </StackPanel>
+        </Grid>
+        <Border CornerRadius="290" Margin="546,168,0,0" Height="434" VerticalAlignment="Top" HorizontalAlignment="Left" Width="434">
+            <Border.Background>
+                <ImageBrush ImageSource="/logo.jpg"/>
+            </Border.Background>
+        </Border>
     </Grid>
 </Window>

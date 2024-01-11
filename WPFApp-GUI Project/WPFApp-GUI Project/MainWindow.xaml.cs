@@ -21,7 +21,7 @@ namespace WPFApp_GUI_Project
     /// 
     public partial class MainWindow : Window
     {
-        string usename;
+        string username;
         string password;
 
         public MainWindow()
@@ -31,13 +31,13 @@ namespace WPFApp_GUI_Project
 
         private void buttonLogin_Click(object sender, RoutedEventArgs e)
         {
-            usename = textBoxUsername.Text;
+            username = textBoxUsername.Text;
             password = passwordBoxPassword.Password;
 
         }
         private void buttonRegistor_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(usename + password);
+            MessageBox.Show(username + password);
         }
 
         private void buttonLogin_MouseEnter(object sender, MouseEventArgs e)

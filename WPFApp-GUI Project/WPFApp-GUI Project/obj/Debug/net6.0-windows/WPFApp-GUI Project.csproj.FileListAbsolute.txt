@@ -23,7 +23,5 @@ C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Pro
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Dashboard.baml
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Styles\RoundedItems.baml
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-Final-Project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Styles\PngButtons.baml
-C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Register.g.cs
-C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Register.baml
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\RegisterWindow.g.cs
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\RegisterWindow.baml

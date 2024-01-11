@@ -10,9 +10,6 @@
     <Compile Update="Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Register.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,9 +19,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Register.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterWindow.xaml">
