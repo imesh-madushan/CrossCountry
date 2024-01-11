@@ -31,56 +31,96 @@ namespace WPFApp_GUI_Project
 
             // Create a new Border
             Border newItemBorder = new Border();
-            newItemBorder.BorderBrush = Brushes.Red;
-            newItemBorder.BorderThickness = new Thickness(0);
-            newItemBorder.Background = new SolidColorBrush(Color.FromRgb(224, 224, 224));
+            newItemBorder.BorderThickness = new Thickness(2);
             newItemBorder.CornerRadius = new CornerRadius(50);
-            newItemBorder.Height = 140;
-            newItemBorder.Width = 720;
+            newItemBorder.Height = 128;
+            newItemBorder.Width = 700;
+            newItemBorder.Margin = new Thickness(0, 21, 0, 0);
+            newItemBorder.Background = new SolidColorBrush(Color.FromRgb(71, 170, 159)); // #FF47AA9F
 
-            // Create a new StackPanel inside the Border
+            // Create a new StackPanel within the Border
             StackPanel newItemStackPanel = new StackPanel();
             newItemStackPanel.Orientation = Orientation.Horizontal;
-            newItemStackPanel.Height = 140;
             newItemStackPanel.Width = 720;
+            newItemStackPanel.Margin = new Thickness(0, 0, -24, -2);
 
-            // Create a new Border inside the StackPanel for the image
-            Border imageBorder = new Border();
-            imageBorder.BorderThickness = new Thickness(4);
-            imageBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(41, 143, 171));
-            imageBorder.Width = 120;
-            imageBorder.Height = 120;
-            imageBorder.CornerRadius = new CornerRadius(38);
-            imageBorder.Margin = new Thickness(20, 0, 0, 0);
-            imageBorder.VerticalAlignment = VerticalAlignment.Center;
+            // Create a new Border within the StackPanel for the image
+            Border newImageBorder = new Border();
+            newImageBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 35, 192)); // #FF4723C0
+            newImageBorder.BorderThickness = new Thickness(2);
+            newImageBorder.Width = 105;
+            newImageBorder.Height = 105;
+            newImageBorder.CornerRadius = new CornerRadius(48);
+            newImageBorder.Margin = new Thickness(20, 0, 0, 2);
+            newImageBorder.VerticalAlignment = VerticalAlignment.Center;
 
-            // Create a new ImageBrush for the background of the inner Border
+            // Set the image source for the new Border
+            ImageBrush imageBrush = new ImageBrush();
+            imageBrush.ImageSource = new BitmapImage(new Uri("s (12).jpg", UriKind.Relative));
+            newImageBorder.Background = imageBrush;
 
-            // Create a new Label
-            Label quantityLabel = new Label();
-            quantityLabel.Content = "Quantity " + itemCount;
-            quantityLabel.Height = 38;
-            quantityLabel.Margin = new Thickness(80, 0, 0, 0);
-            quantityLabel.VerticalAlignment = VerticalAlignment.Center;
-            quantityLabel.FontSize = 15;
+            // Add the new Border to the StackPanel
+            newItemStackPanel.Children.Add(newImageBorder);
 
-            // Create a new Button with the specified style
-            Button buyNowButton = new Button();
-            buyNowButton.Style = (Style)FindResource("RoundedButtonStyle");
-            buyNowButton.Content = "Buy Now";
-            buyNowButton.Height = 33;
-            buyNowButton.Width = 112;
-            buyNowButton.Margin = new Thickness(80, 0, 0, 0);
-            buyNowButton.BorderBrush = null;
-            buyNowButton.VerticalAlignment = VerticalAlignment.Center;
-            buyNowButton.FontSize = 15;
+            // Create a new Label within the StackPanel
+            Label newLabel = new Label();
+            newLabel.Content = "Quantity " + itemCount;
+            newLabel.Height = 38;
+            newLabel.Margin = new Thickness(80, 0, 0, 0);
+            newLabel.VerticalAlignment = VerticalAlignment.Center;
+            newLabel.FontSize = 20;
+            newLabel.Width = 114;
+            newLabel.FontFamily = new FontFamily("Calibri");
 
-            // Add the controls to the StackPanel
-            newItemStackPanel.Children.Add(imageBorder);
-            newItemStackPanel.Children.Add(quantityLabel);
-            newItemStackPanel.Children.Add(buyNowButton);
+            // Add the new Label to the StackPanel
+            newItemStackPanel.Children.Add(newLabel);
 
-            // Add the StackPanel to the Border
+            // Create a new Button within the StackPanel for Buy Now
+            Button newBuyNowButton = new Button();
+            newBuyNowButton.Style = FindResource("RoundedButtonStyle") as Style;
+            newBuyNowButton.Content = "Buy Now";
+            newBuyNowButton.Height = 37;
+            newBuyNowButton.Width = 115;
+            newBuyNowButton.Margin = new Thickness(80, 0, 0, 0);
+            newBuyNowButton.BorderBrush = null;
+            newBuyNowButton.VerticalAlignment = VerticalAlignment.Center;
+            newBuyNowButton.FontSize = 19;
+            newBuyNowButton.Background = Brushes.White;
+            newBuyNowButton.FontFamily = new FontFamily("Calibri");
+
+            // Add the new Buy Now Button to the StackPanel
+            newItemStackPanel.Children.Add(newBuyNowButton);
+
+            // Create a new Button within the StackPanel for delete action
+            Button newDeleteButton = new Button();
+            newDeleteButton.Style = FindResource("RoundedButtonStyle") as Style;
+            newDeleteButton.Background = null;
+            newDeleteButton.Height = 48;
+            newDeleteButton.BorderBrush = null;
+            newDeleteButton.Width = 48;
+            newDeleteButton.Margin = new Thickness(80, 0, 0, 0);
+
+            // Create a new StackPanel within the delete Button
+            StackPanel deleteButtonStackPanel = new StackPanel();
+            deleteButtonStackPanel.Orientation = Orientation.Horizontal;
+            deleteButtonStackPanel.Width = 55;
+
+            // Set the image source for the delete Button
+            Image deleteImage = new Image();
+            deleteImage.Source = new BitmapImage(new Uri("delete (1).png", UriKind.Relative));
+            deleteImage.Width = 47;
+            deleteImage.Height = 53;
+
+            // Add the new Image to the StackPanel within the delete Button
+            deleteButtonStackPanel.Children.Add(deleteImage);
+
+            // Set the StackPanel as the content of the delete Button
+            newDeleteButton.Content = deleteButtonStackPanel;
+
+            // Add the new delete Button to the StackPanel
+            newItemStackPanel.Children.Add(newDeleteButton);
+
+            // Set the StackPanel as the content of the Border
             newItemBorder.Child = newItemStackPanel;
 
             // Add the new Border to the existing StackPanel

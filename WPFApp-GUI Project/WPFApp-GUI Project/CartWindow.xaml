@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFApp_GUI_Project"
         mc:Ignorable="d"
         Background="{x:Null}"
-        Title="CartWindow" Height="630" Width="1005">
+        Title="CartWindow" Height="590" Width="910">
 
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
@@ -59,17 +59,23 @@
             <Grid Grid.ColumnSpan="2">
                 <ScrollViewer Margin="165,8,3,8">
                     <StackPanel x:Name="stackPanelCart" Orientation="Vertical">
-                        <Border BorderBrush="Red" BorderThickness="0" Background="#FFE0E0E0" CornerRadius="50" Height="140" Width="720">
-                            <StackPanel Orientation="Horizontal" Height="140" Width="720">
-                                <Border  BorderThickness="4" BorderBrush="#FF298FAB" Width="120" Height="120" CornerRadius="38" Margin="20,0,0,0" VerticalAlignment="Center">
+                        <Border BorderThickness="2" CornerRadius="50" Height="128" Width="700" Margin="0,21,0,0" Background="#FF47AA9F">
+                            <StackPanel Orientation="Horizontal" Width="720" Margin="0,0,-24,-2">
+                                <Border BorderBrush="#FF4723C0" BorderThickness="2" Width="105" Height="105" CornerRadius="48" Margin="20,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
                                         <ImageBrush ImageSource="/s (12).jpg"/>
                                     </Border.Background>
                                 </Border>
-                                <Label  Content="Quantity 3" Height="38" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="15"/>
-                                <Button Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="33" Width="112" Margin="80,0,0,0" BorderBrush="{x:Null}" VerticalAlignment="Center" FontSize="15"/>
+                                <Label  Content="Quantity 3" Height="38" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="20" Width="114" FontFamily="Calibri"/>
+                                <Button Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="80,0,0,0" BorderBrush="{x:Null}" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Calibri"/>
+                                <Button Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="80,0,0,0">
+                                    <StackPanel Orientation="Horizontal" Width="55">
+                                        <Image Source="/delete (1).png" Width="47" Height="53"/>
+                                    </StackPanel>
+                                </Button>
                             </StackPanel>
                         </Border>
+
                     </StackPanel>
                 </ScrollViewer>
             </Grid>

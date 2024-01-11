@@ -12,6 +12,8 @@
     <None Remove="220391.jpg" />
     <None Remove="add-to-cart %281%29.png" />
     <None Remove="add-to-cart.png" />
+    <None Remove="delete %281%29.png" />
+    <None Remove="delete %284%29.png" />
     <None Remove="exit.png" />
     <None Remove="exit2.png" />
     <None Remove="grocery-store.png" />
@@ -64,6 +66,8 @@
     <Resource Include="220391.jpg" />
     <Resource Include="add-to-cart (1).png" />
     <Resource Include="add-to-cart.png" />
+    <Resource Include="delete (1).png" />
+    <Resource Include="delete (4).png" />
     <Resource Include="exit.png" />
     <Resource Include="exit2.png" />
     <Resource Include="grocery-store.png" />
