@@ -18,6 +18,7 @@
     <None Remove="history1.png" />
     <None Remove="logo %281%29.jpg" />
     <None Remove="logo.jpg" />
+    <None Remove="logo2.png" />
     <None Remove="s %281%29.jpg" />
     <None Remove="s %2810%29.jpg" />
     <None Remove="s %2811%29.jpg" />
@@ -69,6 +70,7 @@
     <Resource Include="history1.png" />
     <Resource Include="logo (1).jpg" />
     <Resource Include="logo.jpg" />
+    <Resource Include="logo2.png" />
     <Resource Include="s (1).jpg" />
     <Resource Include="s (10).jpg" />
     <Resource Include="s (11).jpg" />

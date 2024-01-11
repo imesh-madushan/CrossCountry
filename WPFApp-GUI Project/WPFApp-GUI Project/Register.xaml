@@ -1,0 +1,61 @@
+﻿<Window x:Class="WPFApp_GUI_Project.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp_GUI_Project"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
+        Title="Register" Height="600" Width="900">
+    <Grid>
+        <Border CornerRadius="30" Background="White">
+            <Grid>
+                <Border CornerRadius="500" Margin="22,87,0,-200" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="1369">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                    <Border.Background>
+                        <ImageBrush ImageSource="/logo2.png" Stretch="Uniform" AlignmentY="Center"/>
+                    </Border.Background>
+                </Border>
+
+                <StackPanel Orientation="Vertical" Margin="73,60,331,10">
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Username" FontSize="25" Margin="0,0,25,0" Width="140" Height="45" FontFamily="DejaVu Sans" />
+                        <TextBox Style="{StaticResource RoundTextBoxRegStyle}" Margin="12,0,0,0" FontSize="25" FontFamily="Arial"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label  Content="Password" FontSize="25" FontFamily="DejaVu Sans" Margin="0,0,25,0" Width="140" Height="45" />
+                        <TextBox Style="{StaticResource RoundTextBoxRegStyle}" Margin="12,0,0,0" FontSize="25" FontFamily="Arial"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Name" FontSize="25" FontFamily="DejaVu Sans" Margin="0,0,25,0" Width="140" Height="45" />
+                        <TextBox Style="{StaticResource RoundTextBoxRegStyle}" Margin="12,0,0,0" FontSize="25" FontFamily="Arial"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Age" FontSize="25" FontFamily="DejaVu Sans" Margin="0,0,25,0" Width="140" Height="45" />
+                        <TextBox  Style="{StaticResource RoundTextBoxRegStyle}" Margin="12,0,0,0" FontSize="25" FontFamily="Arial"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Address" FontSize="25" FontFamily="DejaVu Sans" Margin="0,0,25,0" Width="140" Height="45" />
+                        <TextBox Style="{StaticResource RoundTextBoxRegStyle}" Margin="12,0,0,0" FontSize="25" FontFamily="Arial"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Country" FontSize="25" FontFamily="DejaVu Sans" Margin="0,0,25,0" Width="140" Height="45" />
+                        <ListBox DataContext="hi" Height="32" Width="280" SelectionChanged="ListBox_SelectionChanged"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </Grid>
+
+        </Border>
+    </Grid>
+</Window>

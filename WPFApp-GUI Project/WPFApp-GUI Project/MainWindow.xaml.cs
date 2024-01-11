@@ -39,5 +39,73 @@ namespace WPFApp_GUI_Project
         {
             MessageBox.Show(usename + password);
         }
+
+        private void buttonLogin_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.Black ;
+                button.Foreground = Brushes.White;
+            }
+        }
+
+        private void buttonLogin_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.White;
+                button.Foreground = Brushes.Black;
+            }
+        }
+
+        private void buttonRegistor_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.Black;
+                button.Foreground = Brushes.White;
+            }
+        }
+
+        private void buttonRegistor_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.White;
+                button.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxUsername_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is TextBox textbox)
+            {
+                textbox.BorderBrush = Brushes.MediumBlue;
+            }
+        }
+
+        private void textBoxUsername_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is TextBox textbox)
+            {
+                textbox.BorderBrush = Brushes.White;
+            }
+        }
+
+        private void passwordBoxPassword_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is PasswordBox pbox)
+            {
+                pbox.BorderBrush = Brushes.MediumBlue;
+            }
+        }
+
+        private void passwordBoxPassword_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is PasswordBox pbox)
+            {
+                pbox.BorderBrush = Brushes.White;
+            }
+        }
     }
 }
