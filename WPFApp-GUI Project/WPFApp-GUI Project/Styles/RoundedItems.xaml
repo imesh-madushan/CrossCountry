@@ -31,7 +31,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <!--Register Items-->
     <Style x:Key="RoundTextBoxRegStyle" TargetType="TextBox">
         <Setter Property="Template">
@@ -51,7 +51,23 @@
         <Setter Property="Width" Value="270"/>
         <Setter Property="Height" Value="35"/>
     </Style>
-    
+
+    <Style x:Key="RoundComboBoxRegStyle" TargetType="ComboBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width" Value="270"/>
+        <Setter Property="Height" Value="36"/>
+    </Style>
+
     <!--Login Items-->
     <Style x:Key="RoundedButtonLogStyle" TargetType="Button">
         <Setter Property="Template">
@@ -97,4 +113,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+   
 </ResourceDictionary>
+    
+    
+  

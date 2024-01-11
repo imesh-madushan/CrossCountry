@@ -6,7 +6,8 @@
 
 
     <Grid>
-        <Border CornerRadius="30" Background="White"/>
+        <Border CornerRadius="30" Background="White">
+        </Border>
         <Grid>
             <Border CornerRadius="30" HorizontalAlignment="Left" Width="647">
                 <Border.Background>
@@ -39,9 +40,27 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <Label  Content="Country" FontSize="25" FontWeight="Bold" Width="155" Height="49" Foreground="White" FontFamily="Calibri"/>
-                    <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave" MaxLines="2147483645"/>
+                    <ComboBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  MouseEnter="textBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="textBoxUsername_MouseLeave" Width="171" Height="36" FontFamily="Calibri" FontSize="21" Margin="3,0,0,0">
+                        <ComboBoxItem Content="Srilanka"/>
+                        <ComboBoxItem Content="Argentina"/>
+                        <ComboBoxItem Content="Australia"/>
+                        <ComboBoxItem Content="Brazil"/>
+                        <ComboBoxItem Content="Canada"/>
+                        <ComboBoxItem Content="Egypt"/>
+                        <ComboBoxItem Content="France"/>
+                        <ComboBoxItem Content="Germany"/>
+                        <ComboBoxItem Content="India"/>
+                        <ComboBoxItem Content="Italy"/>
+                        <ComboBoxItem Content="Japan"/>
+                        <ComboBoxItem Content="Mexico"/>
+                        <ComboBoxItem Content="Singapore"/>
+                        <ComboBoxItem Content="South Korea"/>
+                        <ComboBoxItem Content="United Kingdom"/>
+                        <ComboBoxItem Content="United States"/>
+                    </ComboBox>
                 </StackPanel>
             </StackPanel>
+            
             <StackPanel Orientation="Vertical" Margin="12,417,283,0">
                 <Button x:Name="buttonRegistor" Content="Registor" Style="{StaticResource RoundedButtonLogStyle}" Background="White" Foreground="Black" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Height="50" Width="160" BorderBrush="{x:Null}" MouseEnter="buttonRegistor_MouseEnter" MouseLeave="buttonRegistor_MouseLeave" />
                 <Label  HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Back to" FontSize="24" FontWeight="Bold" Height="60" Width="113" Foreground="White" FontFamily="Calibri"/>
