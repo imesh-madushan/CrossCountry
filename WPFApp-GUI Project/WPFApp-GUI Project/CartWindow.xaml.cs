@@ -56,7 +56,7 @@ namespace WPFApp_GUI_Project
 
             // Set the image source for the new Border
             ImageBrush imageBrush = new ImageBrush();
-            imageBrush.ImageSource = new BitmapImage(new Uri("s (12).jpg", UriKind.Relative));
+            //imageBrush.ImageSource = new BitmapImage(new Uri("/s (12).jpg", UriKind.Relative));
             newImageBorder.Background = imageBrush;
 
             // Add the new Border to the StackPanel
@@ -107,7 +107,7 @@ namespace WPFApp_GUI_Project
 
             // Set the image source for the delete Button
             Image deleteImage = new Image();
-            deleteImage.Source = new BitmapImage(new Uri("delete (1).png", UriKind.Relative));
+            //deleteImage.Source = new BitmapImage(new Uri("/delete (1).png", UriKind.Relative));
             deleteImage.Width = 47;
             deleteImage.Height = 53;
 
