@@ -63,26 +63,28 @@
             <ScrollViewer Margin="163,17,0,14">
                 <WrapPanel>
                     <Grid Name="I001" Height="190" Width="270">
-                        <Image HorizontalAlignment="Center" Width="218" Source="/s (9).jpg" Margin="0,0,0,24" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Bottom"/>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
-                        <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
+                        <Image HorizontalAlignment="Center" Width="154" Source="/s (9).jpg" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="133" VerticalAlignment="Top" Margin="0,25,0,0"/>
+                        <Label Content="6000 LKR" Margin="49,37,128,122" FontFamily="Segoe UI Variable Small Semibold" FontSize="14"/>
+                        <Label Content="Qty 14" Margin="172,37,40,122" FontFamily="Segoe UI Variable Small Semibold" FontSize="14"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="47,153,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click" FontFamily="Segoe UI Variable Small Semibold"/>
+                        <Button Margin="177,147,47,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
                     <Grid Name="I002" Height="190" Width="270">
                         <Image HorizontalAlignment="Center" Width="216" Source="/s (17).jpg" Margin="0,7,0,0" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="158" VerticalAlignment="Top"/>
-                        <Button x:Name="buttonBuy1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I003" Height="190" Width="270">
                         <Image HorizontalAlignment="Center" Width="218" Source="/s (6).jpg" Margin="0,0,0,24" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I004" Height="190" Width="270">
                         <Image HorizontalAlignment="Center" Width="218" Source="/s (7).jpg" Margin="0,-6,0,0" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="186" VerticalAlignment="Top"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I005" Height="190" Width="270">
                         <Image HorizontalAlignment="Center" Width="210" Source="/s (14).jpg" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Height="118" VerticalAlignment="Top" Margin="0,42,0,0">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -96,7 +98,7 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I006" Height="190" Width="270">
                         <Image Source="/s (27).jpg" Margin="29,0,47,19" RenderTransformOrigin="0.5,0.5" StretchDirection="DownOnly" Stretch="UniformToFill" Height="187" VerticalAlignment="Bottom">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -110,27 +112,27 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I007" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="193" Source="/s (39).jpg" Margin="28,31,0,0" RenderTransformOrigin="0.5,0.5" Height="184" VerticalAlignment="Top"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I008" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="222" Source="/s (10).jpg" Margin="26,0,0,12" RenderTransformOrigin="0.5,0.5" Height="195" VerticalAlignment="Bottom" Stretch="UniformToFill"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I009" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="198" Source="/s (33).jpg" Margin="30,32,0,0" RenderTransformOrigin="0.5,0.5" Height="166" VerticalAlignment="Top"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I010" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="230" Source="/s (70).jpg" Margin="18,0,0,-6" RenderTransformOrigin="0.5,0.5" Height="226" VerticalAlignment="Bottom" Stretch="UniformToFill"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I011" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="263" Source="/s (67).jpg" Margin="16,0,0,12" RenderTransformOrigin="0.543,0.277" Height="196" VerticalAlignment="Bottom">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -144,12 +146,12 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I012" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="254" Source="/s (64).jpg" Margin="20,0,0,1" RenderTransformOrigin="0.5,0.5" Height="218" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I013" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="237" Source="/s (72).jpg" Margin="29,0,0,8" RenderTransformOrigin="0.5,0.5" Height="213" VerticalAlignment="Bottom">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -163,12 +165,12 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I014" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="256" Source="/s (66).jpg" Margin="22,0,0,-11" RenderTransformOrigin="0.5,0.5" Height="224" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I015" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="214" Source="/s (38).jpg" Margin="26,27,0,0" RenderTransformOrigin="0.5,0.5" Height="131" VerticalAlignment="Top">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -182,12 +184,12 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I016" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="203" Source="/s (51).jpg" Margin="36,0,0,40" RenderTransformOrigin="0.5,0.5" Height="182" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I017" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="264" Source="/s (62).jpg" Margin="20,0,0,2" RenderTransformOrigin="0.5,0.5" Height="229" VerticalAlignment="Bottom">
                             <Image.RenderTransform>
                                 <TransformGroup>
@@ -201,7 +203,7 @@
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
                     </Grid>
-                    <Grid Height="190" Width="270">
+                    <Grid x:Name="I018" Height="190" Width="270">
                         <Image HorizontalAlignment="Left" Width="314" Source="/s (31).jpg" RenderTransformOrigin="0.5,0.5" Margin="-34,0,0,0" Height="210" VerticalAlignment="Bottom"/>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,155,0,0" Width="94" Height="28" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click"/>
                         <Button Margin="175,150,49,0" Style="{StaticResource PngButtonStyle}" Height="40" VerticalAlignment="Top" Click="addToCartButton_Click"/>
