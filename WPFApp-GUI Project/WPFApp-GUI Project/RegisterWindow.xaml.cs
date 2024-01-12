@@ -75,5 +75,10 @@ namespace WPFApp_GUI_Project
                 button.Foreground = Brushes.Black;
             }
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

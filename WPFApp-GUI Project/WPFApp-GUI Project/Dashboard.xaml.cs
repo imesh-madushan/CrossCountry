@@ -87,5 +87,46 @@ namespace WPFApp_GUI_Project
                 button.Background = Brushes.Transparent;
             }
         }
+
+        private void buttonProfileSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buyButton_Click(object sender, RoutedEventArgs e)
+        {
+            /*if (sender is FrameworkElement clickedButton)
+            {
+                // Access the parent grid using the Parent property
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    // Access the Name property of the clicked grid
+                    string gridName = clickedGrid.Name;
+
+                    // Perform actions based on the clicked grid name
+                    MessageBox.Show($"Buy button clicked in Grid {gridName}");
+                }
+            }*/
+            if (sender is Button clickedButton)
+            {
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    string gridName = clickedGrid.Name;
+                    MessageBox.Show($"Buy button clicked in Grid {gridName}");
+                }
+            }
+        }
+
+        private void addToCartButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button clickedButton)
+            {
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    string gridName = clickedGrid.Name;
+                    MessageBox.Show($"Cart button clicked in Grid {gridName}");
+                }
+            }
+        }
     }
 }

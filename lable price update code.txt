@@ -1,0 +1,50 @@
+using System;
+using System.Windows;
+using System.Windows.Controls;
+
+namespace YourNamespace
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is FrameworkElement clickedButton)
+            {
+                // Access the parent grid using the Parent property
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    // Access the Name property of the clicked grid
+                    string gridName = clickedGrid.Name;
+
+                    // Construct the corresponding quantity label name
+                    string quantityLabelName = "lableQty" + gridName;
+
+                    // Find the corresponding quantity label
+                    Label quantityLabel = FindName(quantityLabelName) as Label;
+
+                    if (quantityLabel != null)
+                    {
+                        // Update the content of the quantity label
+                        if (int.TryParse(quantityLabel.Content.ToString(), out int currentQuantity))
+                        {
+                            quantityLabel.Content = (currentQuantity + 1).ToString();
+                        }
+                        else
+                        {
+                            // Handle the case where parsing fails (initial content is not an integer)
+                            quantityLabel.Content = "1";
+                        }
+                    }
+
+                    // Perform actions based on the clicked grid name
+                    MessageBox.Show($"Buy button clicked in Grid {gridName}");
+                }
+            }
+        }
+    }
+}
