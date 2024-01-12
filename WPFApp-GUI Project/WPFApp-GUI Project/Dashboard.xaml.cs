@@ -112,6 +112,7 @@ namespace WPFApp_GUI_Project
                 if (clickedButton.Parent is Grid clickedGrid)
                 {
                     string gridName = clickedGrid.Name;
+
                     MessageBox.Show($"Buy button clicked in Grid {gridName}");
                 }
             }

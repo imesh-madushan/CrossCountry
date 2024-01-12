@@ -60,7 +60,7 @@
                     </ComboBox>
                 </StackPanel>
             </StackPanel>
-            
+
             <StackPanel Orientation="Vertical" Margin="12,417,283,0">
                 <Button x:Name="buttonRegistor" Content="Registor" Style="{StaticResource RoundedButtonLogStyle}" Background="White" Foreground="Black" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Height="50" Width="160" BorderBrush="{x:Null}" MouseEnter="buttonRegistor_MouseEnter" MouseLeave="buttonRegistor_MouseLeave" />
                 <Label  HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Back to" FontSize="24" FontWeight="Bold" Height="60" Width="113" Foreground="White" FontFamily="Calibri"/>
