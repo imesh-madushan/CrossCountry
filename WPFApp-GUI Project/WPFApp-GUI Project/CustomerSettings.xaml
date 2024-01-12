@@ -1,0 +1,96 @@
+﻿<Window x:Class="WPFApp_GUI_Project.CustomerSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp_GUI_Project"
+        mc:Ignorable="d"
+        Background="{x:Null}"
+        Title="CustomerSettings" Height="600" Width="910">
+
+    <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="borderSideBar" CornerRadius="20">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2CBA8C"/>
+                        <GradientStop Color="#FF7E89C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="user4.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
+                        <Label x:Name="lableUsername" Margin="18,14,14,14" HorizontalAlignment="Left"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
+                            <StackPanel Orientation="Horizontal" Width="113">
+                                <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
+                                <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
+                            <StackPanel Orientation="Horizontal" Width="113">
+                                <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
+                                <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
+                            <StackPanel Orientation="Horizontal" Width="113">
+                                <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
+                                <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,0,0,12" HorizontalAlignment="Left" Width="157">
+                        <StackPanel Orientation="Horizontal" Width="113">
+                            <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
+                            <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical">
+                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Margin="85,50,127,0" Height="436">
+                        <StackPanel Orientation="Vertical" Margin="30,13,30,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="Name" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="Age" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="Address" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="Username" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="Old Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Label  Content="New Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Button BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Update" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="271,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" HorizontalAlignment="Left" Height="47"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>
