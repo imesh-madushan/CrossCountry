@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFApp_GUI_Project"
         mc:Ignorable="d"
         Background="{x:Null}"
-        Title="AdminDashboard"  Height="600" Width="910">
+        Title="AdminDashboard"  Height="590" Width="910">
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -30,25 +30,7 @@
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
                             <StackPanel Orientation="Horizontal" Width="141">
                                 <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
-                                <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
-                            <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
-                                <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
-                            <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
-                                <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
-                            <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
-                                <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBlock x:Name="textDashboardBtn" Text="Items" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -70,8 +52,8 @@
                     <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="10,87,10,0" VerticalAlignment="Top" >
                     </Border>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="682" Margin="0,106,0,0">
-                        <Label Content=" Enter Quantity to add and Confirm action" Height="56" Margin="30,54,0,0" FontSize="20" Width="387" Background="{x:Null}" FontFamily="Gadugi"/>
-                        <Border CornerRadius="77" BorderBrush="Aquamarine"  BorderThickness="7" Height="263" Margin="0,25,0,0" Background="White" HorizontalAlignment="Center" Width="622">
+                        <Label Content=" Enter Quantity to add and Confirm action" Height="56" Margin="30,45,0,0" FontSize="20" Width="387" Background="{x:Null}" FontFamily="Gadugi"/>
+                        <Border CornerRadius="77" BorderBrush="Aquamarine"  BorderThickness="7" Height="263" Margin="0,20,0,0" Background="White" HorizontalAlignment="Center" Width="622">
 
                             <StackPanel Orientation="Horizontal" Margin="0,0,-2,-2">
                                 <StackPanel Orientation="Vertical" Height="208" Margin="42,20,0,0">
@@ -93,7 +75,6 @@
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
-
                         </Border>
                         <Button BorderBrush="Aquamarine" BorderThickness="2" Background="#FFFFB835" Content="CONFIRM" Style="{StaticResource RoundedButtonStyle}" Width="170" Margin="0,-31,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="20" HorizontalAlignment="Center" Height="47"/>
                     </StackPanel>
