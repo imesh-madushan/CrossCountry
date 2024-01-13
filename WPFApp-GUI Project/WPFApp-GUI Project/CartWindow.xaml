@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="borderSideBar" CornerRadius="20">
+            <Border x:Name="borderSideBar" CornerRadius="20,3,3,20">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF2CBA8C"/>
@@ -28,7 +28,13 @@
                     </StackPanel>
 
                     <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
-                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
+                            <StackPanel Orientation="Horizontal" Width="141">
+                                <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
+                                <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
                             <StackPanel Orientation="Horizontal" Width="113">
                                 <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
                                 <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
@@ -57,18 +63,24 @@
                 </Grid>
             </Border>
             <Grid Grid.ColumnSpan="2">
-                <ScrollViewer Margin="165,8,3,8">
+                <Border Margin="165,0,78,0" RenderTransformOrigin="0.5,0.5" Height="93" VerticalAlignment="Top">
+                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Shopping Cart" FontSize="40" Margin="-2,0,-73,0" FontFamily="Segoe UI Variable Display Semibold"/>
+                </Border>
+                <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="165,87,5,0" VerticalAlignment="Top" >
+                </Border>
+                <ScrollViewer Margin="165,101,3,8">
                     <StackPanel x:Name="stackPanelCart" Orientation="Vertical">
-                        <Border BorderThickness="2" CornerRadius="50" Height="128" Width="700" Margin="0,21,0,0" Background="#FF47AA9F">
+                        <Border BorderThickness="2" CornerRadius="43" Height="100" Width="641" Margin="0,21,0,0" Background="#FFE2E3DB">
                             <StackPanel Orientation="Horizontal" Width="720" Margin="0,0,-24,-2">
-                                <Border BorderBrush="#FF4723C0" BorderThickness="2" Width="105" Height="105" CornerRadius="48" Margin="20,0,0,2" VerticalAlignment="Center">
+                                <Border BorderBrush="#FF4723C0" BorderThickness="2" Width="83" Height="82" CornerRadius="48" Margin="11,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
                                         <ImageBrush ImageSource="/s (12).jpg"/>
                                     </Border.Background>
                                 </Border>
-                                <Label  Content="Quantity 3" Height="38" Margin="80,0,0,0" VerticalAlignment="Center" FontSize="20" Width="114" FontFamily="Calibri"/>
-                                <Button Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="80,0,0,0" BorderBrush="{x:Null}" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Calibri"/>
-                                <Button Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="80,0,0,0">
+                                <Label  Content="Quantity 3" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="20" Width="114" FontFamily="Calibri"/>
+                                <Label  Content="6000 LKR" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="20" Width="114" FontFamily="Calibri"/>
+                                <Button Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="30,0,0,0" BorderBrush="Aquamarine" BorderThickness="2" VerticalAlignment="Center" FontSize="19" Background="#FFFDFDFD" FontFamily="Calibri"/>
+                                <Button Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="45,0,0,0">
                                     <StackPanel Orientation="Horizontal" Width="55">
                                         <Image Source="/delete (1).png" Width="47" Height="53"/>
                                     </StackPanel>

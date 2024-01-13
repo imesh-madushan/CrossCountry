@@ -12,6 +12,7 @@
     <None Remove="220391.jpg" />
     <None Remove="add-to-cart %281%29.png" />
     <None Remove="add-to-cart.png" />
+    <None Remove="dashboard.png" />
     <None Remove="delete %281%29.png" />
     <None Remove="delete %284%29.png" />
     <None Remove="exit.png" />
@@ -51,6 +52,7 @@
     <None Remove="s %289%29.jpg" />
     <None Remove="sample.jpg" />
     <None Remove="settings2.png" />
+    <None Remove="store %283%29.png" />
     <None Remove="user %281%29.png" />
     <None Remove="user %282%29.png" />
     <None Remove="user %283%29.png" />
@@ -66,6 +68,7 @@
     <Resource Include="220391.jpg" />
     <Resource Include="add-to-cart (1).png" />
     <Resource Include="add-to-cart.png" />
+    <Resource Include="dashboard.png" />
     <Resource Include="delete (1).png" />
     <Resource Include="delete (4).png" />
     <Resource Include="exit.png" />
@@ -105,6 +108,7 @@
     <Resource Include="s (9).jpg" />
     <Resource Include="sample.jpg" />
     <Resource Include="settings2.png" />
+    <Resource Include="store (3).png" />
     <Resource Include="user.png" />
     <Resource Include="user4.png" />
     <Resource Include="user6.png" />

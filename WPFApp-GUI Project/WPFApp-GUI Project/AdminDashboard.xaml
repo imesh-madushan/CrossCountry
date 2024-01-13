@@ -27,7 +27,13 @@
                     </StackPanel>
 
                     <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
-                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
+                            <StackPanel Orientation="Horizontal" Width="141">
+                                <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
+                                <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
                             <StackPanel Orientation="Horizontal" Width="113">
                                 <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
                                 <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
