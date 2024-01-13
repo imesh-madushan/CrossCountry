@@ -65,12 +65,12 @@
 
             <Grid Grid.Column="1">
                 <Border RenderTransformOrigin="0.5,0.5" Height="93" VerticalAlignment="Top">
-                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Update Details" FontSize="40" Margin="-2,0,-73,0" FontFamily="Segoe UI Variable Display Semibold"/>
+                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Update Details" FontSize="40" Margin="-2,0,0,0" FontFamily="Segoe UI Variable Display Semibold"/>
                 </Border>
                 <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="10,87,10,0" VerticalAlignment="Top" >
                 </Border>
-                <StackPanel Orientation="Vertical" Margin="0,94,0,0">
-                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Margin="85,30,127,0" Height="408" Width="536">
+                <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="0,94,0,0">
+                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Height="408" Width="536" Margin="0,35,0,0">
                         <StackPanel Orientation="Vertical" Margin="0,13,29,0">
                             <StackPanel Orientation="Horizontal" Margin="0,29.8,0,0" RenderTransformOrigin="0.5,0.5">
                                 <Label  Content="Username" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
@@ -85,12 +85,12 @@
                                 <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                                <Label  Content="Add Secondary Address" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
+                                <TextBlock  FontSize="22" FontWeight="Bold" Width="170" Height="55" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,1,0,0" Text="Add Secondary Address" TextWrapping="Wrap"/>
                                 <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0" Height="78"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
-                    <Button HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Update" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" Height="47"/>
+                    <Button HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Save" Style="{StaticResource RoundedButtonStyle}" Width="146" Margin="0,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" Height="47"/>
                 </StackPanel>
             </Grid>
         </Grid>

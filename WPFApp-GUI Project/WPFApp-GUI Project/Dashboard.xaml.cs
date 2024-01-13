@@ -129,5 +129,21 @@ namespace WPFApp_GUI_Project
                 }
             }
         }
+
+        private void buttonDashboard_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.LightBlue;
+            }
+        }
+
+        private void buttonDashboard_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.Background = Brushes.Transparent;
+            }
+        }
     }
 }
