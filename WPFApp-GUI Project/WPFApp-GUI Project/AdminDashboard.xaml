@@ -13,7 +13,7 @@
                 <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="borderSideBar" CornerRadius="20">
+            <Border x:Name="borderSideBar" CornerRadius="20,8,8,20">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF2CBA8C"/>

@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="borderSideBar" CornerRadius="20">
+            <Border x:Name="borderSideBar" CornerRadius="20,8,8,20">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF2CBA8C"/>
@@ -64,36 +64,33 @@
             </Border>
 
             <Grid Grid.Column="1">
-                <StackPanel Orientation="Vertical">
-                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Margin="85,50,127,0" Height="436">
-                        <StackPanel Orientation="Vertical" Margin="30,13,30,0">
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Name" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                <Border RenderTransformOrigin="0.5,0.5" Height="93" VerticalAlignment="Top">
+                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Update Details" FontSize="40" Margin="-2,0,-73,0" FontFamily="Segoe UI Variable Display Semibold"/>
+                </Border>
+                <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="10,87,10,0" VerticalAlignment="Top" >
+                </Border>
+                <StackPanel Orientation="Vertical" Margin="0,94,0,0">
+                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Margin="85,30,127,0" Height="408" Width="536">
+                        <StackPanel Orientation="Vertical" Margin="0,13,29,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,29.8,0,0" RenderTransformOrigin="0.5,0.5">
+                                <Label  Content="Username" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
                                 <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Age" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <Label  Content="Old Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
                                 <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Address" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <Label  Content="New Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
                                 <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Username" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Old Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="New Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                                <Label  Content="Add Secondary Address" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
+                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0" Height="78"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
-                    <Button BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Update" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="271,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" HorizontalAlignment="Left" Height="47"/>
+                    <Button HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Update" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" Height="47"/>
                 </StackPanel>
             </Grid>
         </Grid>
