@@ -35,3 +35,4 @@ C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Pro
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\CustomerSettings.baml
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\HistoryWindow.g.cs
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\HistoryWindow.baml
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\Styles\CartAndHistoryTemplate.baml

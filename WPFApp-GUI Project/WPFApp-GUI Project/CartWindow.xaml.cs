@@ -14,120 +14,154 @@ using System.Windows.Shapes;
 
 namespace WPFApp_GUI_Project
 {
-    /// <summary>
-    /// Interaction logic for CartWindow.xaml
-    /// </summary>
     public partial class CartWindow : Window
     {
-        private int itemCount = 0;
+        private int itemCount = 1;
         public CartWindow()
         {
             InitializeComponent();
         }
 
+        
         private void buttonLogOut_Click(object sender, RoutedEventArgs e)
-        {
-            itemCount++;
+        {            
+            Grid newGrid = new Grid();
+            newGrid.Name = "I" + itemCount;
 
-            // Create a new Border
-            Border newItemBorder = new Border();
-            newItemBorder.BorderThickness = new Thickness(2);
-            newItemBorder.CornerRadius = new CornerRadius(50);
-            newItemBorder.Height = 128;
-            newItemBorder.Width = 700;
-            newItemBorder.Margin = new Thickness(0, 21, 0, 0);
-            newItemBorder.Background = new SolidColorBrush(Color.FromRgb(71, 170, 159)); // #FF47AA9F
+            string cartImagePath = $"{newGrid.Name}.jpg";
 
-            // Create a new StackPanel within the Border
-            StackPanel newItemStackPanel = new StackPanel();
-            newItemStackPanel.Orientation = Orientation.Horizontal;
-            newItemStackPanel.Width = 720;
-            newItemStackPanel.Margin = new Thickness(0, 0, -24, -2);
+            // Create Border
+            Border border = new Border();
+            border.BorderThickness = new Thickness(2);
+            border.CornerRadius = new CornerRadius(43);
+            border.Height = 100;
+            border.Width = 641;
+            border.Margin = new Thickness(0, 21, 0, 0);
+            SolidColorBrush borderBrushColor= new SolidColorBrush(Color.FromArgb(255, 226, 227, 219));
+            border.Background = borderBrushColor;
 
-            // Create a new Border within the StackPanel for the image
-            Border newImageBorder = new Border();
-            newImageBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(71, 35, 192)); // #FF4723C0
-            newImageBorder.BorderThickness = new Thickness(2);
-            newImageBorder.Width = 105;
-            newImageBorder.Height = 105;
-            newImageBorder.CornerRadius = new CornerRadius(48);
-            newImageBorder.Margin = new Thickness(20, 0, 0, 2);
-            newImageBorder.VerticalAlignment = VerticalAlignment.Center;
+            // Create StackPanel
+            StackPanel stackPanel = new StackPanel();
+            stackPanel.Orientation = Orientation.Horizontal;
+            stackPanel.Margin = new Thickness(42, 21, 42, -2);
 
-            // Set the image source for the new Border
+            // Create ImageBrush
             ImageBrush imageBrush = new ImageBrush();
-            //imageBrush.ImageSource = new BitmapImage(new Uri("/s (12).jpg", UriKind.Relative));
-            newImageBorder.Background = imageBrush;
+            //imageBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/{cartImagePath}", UriKind.Absolute));
+            imageBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/products/{cartImagePath}", UriKind.Absolute));
 
-            // Add the new Border to the StackPanel
-            newItemStackPanel.Children.Add(newImageBorder);
+            // Create Image Border
+            Border imageBorder = new Border();
+            SolidColorBrush imageBorderColor = new SolidColorBrush(Color.FromArgb(255, 95, 237, 203));
+            imageBorder.BorderBrush = imageBorderColor;
+            imageBorder.BorderThickness = new Thickness(2);
+            imageBorder.Width = 83;
+            imageBorder.Height = 82;
+            imageBorder.CornerRadius = new CornerRadius(48);
+            imageBorder.Margin = new Thickness(11, 0, 0, 2);
+            imageBorder.VerticalAlignment = VerticalAlignment.Center;
+            imageBorder.Background = imageBrush;
+           
 
-            // Create a new Label within the StackPanel
-            Label newLabel = new Label();
-            newLabel.Content = "Quantity " + itemCount;
-            newLabel.Height = 38;
-            newLabel.Margin = new Thickness(80, 0, 0, 0);
-            newLabel.VerticalAlignment = VerticalAlignment.Center;
-            newLabel.FontSize = 20;
-            newLabel.Width = 114;
-            newLabel.FontFamily = new FontFamily("Calibri");
+            // Create Labels
+            Label label1 = new Label();
+            label1.Content = "Quantity 3";
+            label1.Height = 38;
+            label1.Margin = new Thickness(30, 0, 0, 0);
+            label1.VerticalAlignment = VerticalAlignment.Center;
+            label1.FontSize = 19;
+            label1.Width = 114;
+            label1.FontFamily = new FontFamily("Calibri");
 
-            // Add the new Label to the StackPanel
-            newItemStackPanel.Children.Add(newLabel);
+            Label label2 = new Label();
+            label2.Content = "6000 LKR";
+            label2.Height = 38;
+            label2.Margin = new Thickness(30, 0, 0, 0);
+            label2.VerticalAlignment = VerticalAlignment.Center;
+            label2.FontSize = 19;
+            label2.Width = 114;
+            label2.FontFamily = new FontFamily("Calibri");
 
-            // Create a new Button within the StackPanel for Buy Now
-            Button newBuyNowButton = new Button();
-            newBuyNowButton.Style = FindResource("RoundedButtonStyle") as Style;
-            newBuyNowButton.Content = "Buy Now";
-            newBuyNowButton.Height = 37;
-            newBuyNowButton.Width = 115;
-            newBuyNowButton.Margin = new Thickness(80, 0, 0, 0);
-            newBuyNowButton.BorderBrush = null;
-            newBuyNowButton.VerticalAlignment = VerticalAlignment.Center;
-            newBuyNowButton.FontSize = 19;
-            newBuyNowButton.Background = Brushes.White;
-            newBuyNowButton.FontFamily = new FontFamily("Calibri");
+            // Create Buttons
+            Button buyNowButton = new Button();
+            buyNowButton.Style = (Style)FindResource("RoundedButtonStyle");
+            buyNowButton.Name = "buttonCartBuyNow";
+            buyNowButton.Content = "Buy Now";
+            buyNowButton.Height = 37;
+            buyNowButton.Width = 115;
+            buyNowButton.Margin = new Thickness(30, 0, 0, 0);
+            buyNowButton.BorderBrush = new SolidColorBrush(Colors.Aquamarine);
+            buyNowButton.BorderThickness = new Thickness(2);
+            buyNowButton.VerticalAlignment = VerticalAlignment.Center;
+            buyNowButton.FontSize = 18;
+            buyNowButton.Background = new SolidColorBrush(Colors.White);
+            buyNowButton.FontFamily = new FontFamily("Calibri");
+            buyNowButton.Click += buttonCartBuyNow_Click;
 
-            // Add the new Buy Now Button to the StackPanel
-            newItemStackPanel.Children.Add(newBuyNowButton);
+            Button deleteButton = new Button();
+            deleteButton.Style = (Style)FindResource("RoundedButtonStyle");
+            deleteButton.Background = null;
+            deleteButton.Height = 48;
+            deleteButton.BorderBrush = null;
+            deleteButton.Width = 48;
+            deleteButton.Margin = new Thickness(45, 0, 0, 0);
+            deleteButton.Click += buttonCartDelete_Click;
 
-            // Create a new Button within the StackPanel for delete action
-            Button newDeleteButton = new Button();
-            newDeleteButton.Style = FindResource("RoundedButtonStyle") as Style;
-            newDeleteButton.Background = null;
-            newDeleteButton.Height = 48;
-            newDeleteButton.BorderBrush = null;
-            newDeleteButton.Width = 48;
-            newDeleteButton.Margin = new Thickness(80, 0, 0, 0);
-
-            // Create a new StackPanel within the delete Button
             StackPanel deleteButtonStackPanel = new StackPanel();
             deleteButtonStackPanel.Orientation = Orientation.Horizontal;
             deleteButtonStackPanel.Width = 55;
 
-            // Set the image source for the delete Button
             Image deleteImage = new Image();
-            //deleteImage.Source = new BitmapImage(new Uri("/delete (1).png", UriKind.Relative));
-            deleteImage.Width = 47;
-            deleteImage.Height = 53;
+            deleteImage.Source = new BitmapImage(new Uri("/delete (1).png", UriKind.Relative));
+            deleteImage.Width = 37;
+            deleteImage.Height = 52;
 
-            // Add the new Image to the StackPanel within the delete Button
             deleteButtonStackPanel.Children.Add(deleteImage);
+            deleteButton.Content = deleteButtonStackPanel;
+            
 
-            // Set the StackPanel as the content of the delete Button
-            newDeleteButton.Content = deleteButtonStackPanel;
+            // Add elements to StackPanel
+            stackPanel.Children.Add(imageBorder);
+            stackPanel.Children.Add(label1);
+            stackPanel.Children.Add(label2);
+            stackPanel.Children.Add(buyNowButton);
+            stackPanel.Children.Add(deleteButton);
 
-            // Add the new delete Button to the StackPanel
-            newItemStackPanel.Children.Add(newDeleteButton);
+            // Add Border and StackPanel to Grid
+            newGrid.Children.Add(border);
+            newGrid.Children.Add(stackPanel);
 
-            // Set the StackPanel as the content of the Border
-            newItemBorder.Child = newItemStackPanel;
+            // Add the new Grid to your existing container (e.g., a parent Grid or a StackPanel)
+            // For example, if your parent container is a Grid named "mainGrid":
+            stackPanelCart.Children.Add(newGrid);
 
-            // Add the new Border to the existing StackPanel
-            stackPanelCart.Children.Add(newItemBorder);
+            // Increment the item counter for the next item
+            itemCount++;
+
+            if (sender is Button button && button.Parent is StackPanel sP && sP.Parent is Grid mainGrid)
+            {
+                string mainGridName = mainGrid.Name;
+                MessageBox.Show("Clicked item: " + mainGridName);
+            }
         }
 
-        
+        private void buttonCartBuyNow_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Parent is StackPanel stackpanel && stackpanel.Parent is Grid maingrid)
+            {
+                string maingridName = maingrid.Name;
+                MessageBox.Show(maingridName);
+            }
+        }
+
+        private void buttonCartDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button button && button.Parent is StackPanel stackpanel && stackpanel.Parent is Grid maingrid)
+            {
+                stackPanelCart.Children.Remove(maingrid);
+                //please add data base cart deletion tooo
+            }
+        }
     }
-}
+ }
 

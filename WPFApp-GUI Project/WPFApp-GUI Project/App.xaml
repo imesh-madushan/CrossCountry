@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/RoundedItems.xaml"/>
                 <ResourceDictionary Source="Styles/PngButtons.xaml"/>
+                <ResourceDictionary Source="Styles/CartAndHistoryTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
