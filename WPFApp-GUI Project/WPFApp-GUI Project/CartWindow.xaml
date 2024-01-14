@@ -74,7 +74,7 @@
                             <StackPanel Orientation="Horizontal" Width="720" Margin="0,0,-24,-2">
                                 <Border BorderBrush="#FF4723C0" BorderThickness="2" Width="83" Height="82" CornerRadius="48" Margin="11,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
-                                        <ImageBrush ImageSource="/s (12).jpg"/>
+                                        <ImageBrush ImageSource="s (9).jpg"/>
                                     </Border.Background>
                                 </Border>
                                 <Label  Content="Quantity 3" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="20" Width="114" FontFamily="Calibri"/>

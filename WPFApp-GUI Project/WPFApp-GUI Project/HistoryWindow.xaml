@@ -74,9 +74,14 @@
                             <StackPanel Orientation="Horizontal" Width="720" Margin="0,0,-24,-2">
                                 <Border BorderBrush="#FF4723C0" BorderThickness="2" Width="75" Height="75" CornerRadius="48" Margin="-0.3,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
-                                        <ImageBrush ImageSource="/s (12).jpg"/>
+                                        <VisualBrush>
+                                            <VisualBrush.Visual>
+                                                <Image Source="s (9).jpg" Stretch="Uniform"/>
+                                            </VisualBrush.Visual>
+                                        </VisualBrush>
                                     </Border.Background>
                                 </Border>
+
                                 <Label VerticalContentAlignment="Center" Content="Quantity 3" Height="38" Margin="40,0,0,0" VerticalAlignment="Center" FontSize="17" Width="114" FontFamily="Calibri"/>
                                 <Label VerticalContentAlignment="Center" Content="3000 LKR" Height="38" Margin="40,0,0,0" VerticalAlignment="Center" FontSize="17" Width="114" FontFamily="Calibri"/>
                                 <TextBox SelectionBrush="{x:Null}" Focusable="False" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" VerticalContentAlignment="Center" TextAlignment="Left" Height="82" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="17" Width="177" FontFamily="Calibri" Text="M.D Dissanayake, NO 198 Akmeemana, Galle" TextWrapping="Wrap"/>
