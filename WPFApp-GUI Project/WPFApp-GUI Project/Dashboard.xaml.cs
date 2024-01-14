@@ -135,33 +135,6 @@ namespace WPFApp_GUI_Project
             
         }
 
-        //Button Clicks
-        private void BuyButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (sender is Button clickedButton)
-            {
-                if (clickedButton.Parent is Grid clickedGrid)
-                {
-                    string gridName = clickedGrid.Name;
-
-                    MessageBox.Show($"Buy button clicked in Grid {gridName}");
-                }
-            }
-        }
-        private void AddToCartButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (sender is Button clickedButton)
-            {
-                if (clickedButton.Parent is Grid clickedGrid)
-                {
-                    string gridName = clickedGrid.Name;
-                    MessageBox.Show($"Cart button clicked in Grid {gridName}");
-                }
-            }
-        }
-
-
-
         //Mouse Enter Leave Animations
         private void ButtonLogOut_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -207,6 +180,58 @@ namespace WPFApp_GUI_Project
             {
                 button.BorderThickness = new Thickness(0);
             }
+        }
+
+        //Button Clicks
+        private void BuyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button clickedButton)
+            {
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    string gridName = clickedGrid.Name;
+
+                    MessageBox.Show($"Buy button clicked in Grid {gridName}");
+                }
+            }
+        }
+        private void AddToCartButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button clickedButton)
+            {
+                if (clickedButton.Parent is Grid clickedGrid)
+                {
+                    string gridName = clickedGrid.Name;
+                    MessageBox.Show($"Cart button clicked in Grid {gridName}");
+                }
+            }
+        }
+        private void ButtonProfileSetting_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerSettings windoCall = new CustomerSettings();
+            windoCall.Show();
+            this.Hide();
+        }
+
+        private void ButtonHistory_Click(object sender, RoutedEventArgs e)
+        {
+            HistoryWindow windowCall = new HistoryWindow();
+            windowCall.Show();
+            this.Hide();
+        }
+
+        private void ButtonCart_Click(object sender, RoutedEventArgs e)
+        {
+            CartWindow windowCall = new CartWindow();
+            windowCall.Show();
+            this.Hide();
+        }
+
+        private void buttonLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow windowCall = new MainWindow();
+            windowCall.Show();
+            this.Close();
         }
     }
 }

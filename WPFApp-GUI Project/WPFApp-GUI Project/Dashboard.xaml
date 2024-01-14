@@ -31,25 +31,25 @@
                         </StackPanel>
 
                         <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
                                 <StackPanel Orientation="Horizontal" Width="141">
                                     <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
                                     <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonProfileSetting_Click">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}"  Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonHistory" Background="{x:Null}" Height="48" BorderBrush="{x:Null}"  Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonHistory_Click">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonCart_Click">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
@@ -57,7 +57,7 @@
                             </Button>
                         </StackPanel>
 
-                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="ButtonLogOut_MouseEnter" MouseLeave="ButtonLogOut_MouseLeave">
+                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="ButtonLogOut_MouseEnter" MouseLeave="ButtonLogOut_MouseLeave" Click="buttonLogOut_Click">
                             <StackPanel Orientation="Horizontal" Width="113">
                                 <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
                                 <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
