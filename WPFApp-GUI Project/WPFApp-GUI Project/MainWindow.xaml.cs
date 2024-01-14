@@ -29,18 +29,28 @@ namespace WPFApp_GUI_Project
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            username = textBoxUsername.Text;
-            password = passwordBoxPassword.Password;
+            username = TextBoxUsername.Text;
+            password = PasswordBoxPassword.Password;
 
         }
-        private void buttonRegistor_Click(object sender, RoutedEventArgs e)
+        //Buton Clicks
+        private void ButtonRegistor_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(username + password);
+            RegisterWindow windowCaller = new RegisterWindow();
+            windowCaller.Show();
+            this.Close();
+        }
+        private void ButtonAdminLogin_Click(object sender, RoutedEventArgs e)
+        {
+            AdminLoginWindow windowCall = new AdminLoginWindow();
+            windowCall.Show();
+            this.Close();
         }
 
-        private void buttonLogin_MouseEnter(object sender, MouseEventArgs e)
+        //Mouse Enter and Leave
+        private void ButtonLogin_MouseEnter(object sender, MouseEventArgs e)
         {
             if (sender is Button button)
             {
@@ -49,7 +59,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void buttonLogin_MouseLeave(object sender, MouseEventArgs e)
+        private void ButtonLogin_MouseLeave(object sender, MouseEventArgs e)
         {
             if (sender is Button button)
             {
@@ -58,7 +68,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void buttonRegistor_MouseEnter(object sender, MouseEventArgs e)
+        private void ButtonRegistor_MouseEnter(object sender, MouseEventArgs e)
         {
             if (sender is Button button)
             {
@@ -67,7 +77,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void buttonRegistor_MouseLeave(object sender, MouseEventArgs e)
+        private void ButtonRegistor_MouseLeave(object sender, MouseEventArgs e)
         {
             if (sender is Button button)
             {
@@ -76,7 +86,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void textBoxUsername_MouseEnter(object sender, MouseEventArgs e)
+        private void TextBoxUsername_MouseEnter(object sender, MouseEventArgs e)
         {
             if (sender is TextBox textbox)
             {
@@ -84,7 +94,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void textBoxUsername_MouseLeave(object sender, MouseEventArgs e)
+        private void TextBoxUsername_MouseLeave(object sender, MouseEventArgs e)
         {
             if (sender is TextBox textbox)
             {
@@ -92,7 +102,7 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void passwordBoxPassword_MouseEnter(object sender, MouseEventArgs e)
+        private void PasswordBoxPassword_MouseEnter(object sender, MouseEventArgs e)
         {
             if (sender is PasswordBox pbox)
             {
@@ -100,11 +110,32 @@ namespace WPFApp_GUI_Project
             }
         }
 
-        private void passwordBoxPassword_MouseLeave(object sender, MouseEventArgs e)
+        private void PasswordBoxPassword_MouseLeave(object sender, MouseEventArgs e)
         {
             if (sender is PasswordBox pbox)
             {
                 pbox.BorderBrush = Brushes.White;
+            }
+        }
+
+        
+
+        private void ButtonAdminLogin_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.BorderBrush = Brushes.Black;
+                button.Foreground = Brushes.Red;
+                button.BorderThickness = new Thickness(1.4);
+            }
+        }
+
+        private void ButtonAdminLogin_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is Button button)
+            { 
+                button.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 41, 24, 112));
+                button.Foreground = new SolidColorBrush(Color.FromArgb(255, 73, 30, 137));
             }
         }
     }

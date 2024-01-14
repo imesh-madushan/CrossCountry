@@ -23,32 +23,32 @@
                 </Border.Background>
                 <Grid>
                     <StackPanel Orientation="Vertical">
-                        <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="user4.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
+                        <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="/Icons/user-profile.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
                         <Label x:Name="lableUsername" Margin="18,14,14,14" HorizontalAlignment="Left"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
                     </StackPanel>
 
                     <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
                             <StackPanel Orientation="Horizontal" Width="141">
-                                <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
+                                <Image x:Name="imgDashboardBtn" Source="/Icons/shopping-menu.png" Width="30" Margin="13,0,16,0"/>
                                 <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
                             <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
+                                <Image x:Name="imgSettingsBtn" Source="/Icons/settings-menu.png" Width="30" Margin="0,0,16,0"/>
                                 <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
                             <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
+                                <Image x:Name="imgHistoryBtn" Source="/Icons/history-menu.png" Width="30" Margin="0,0,16,0"/>
                                 <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0">
                             <StackPanel Orientation="Horizontal" Width="113">
-                                <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
+                                <Image x:Name="imgCartBtn" Source="/Icons/add-to-cart.png" Width="30" Margin="0,0,16,0"/>
                                 <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
                             </StackPanel>
                         </Button>
@@ -56,7 +56,7 @@
 
                     <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,0,0,12" HorizontalAlignment="Left" Width="157" Click="buttonLogOut_Click">
                         <StackPanel Orientation="Horizontal" Width="113">
-                            <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
+                            <Image x:Name="imgLogOutBtn" Source="/Icons/logout.png" Width="30" Margin="0,0,10,0"/>
                             <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
                         </StackPanel>
                     </Button>
@@ -76,7 +76,7 @@
                             <StackPanel  Orientation="Horizontal" Margin="42,21,42,-2">
                                 <Border BorderBrush="#FF5FEDCB" BorderThickness="2" Width="83" Height="82" CornerRadius="48" Margin="11,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
-                                        <ImageBrush ImageSource="/I2.jpg"/>
+                                        <ImageBrush ImageSource="/products/I001.jpg"/>
                                     </Border.Background>
                                 </Border>
                                 <Label  Content="Quantity 3" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="19" Width="114" FontFamily="Calibri"/>
@@ -84,7 +84,7 @@
                                 <Button x:Name="buttonCartBuyNow" Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="30,0,0,0" BorderBrush="Aquamarine" BorderThickness="2" VerticalAlignment="Center" FontSize="18" Background="#FFFDFDFD" FontFamily="Calibri" Click="buttonCartBuyNow_Click"/>
                                 <Button x:Name="buttonCartDelete" Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="45,0,0,0" Click="buttonCartDelete_Click">
                                     <StackPanel Orientation="Horizontal" Width="55">
-                                        <Image Source="/delete (1).png" Width="37" Height="52"/>
+                                        <Image Source="/Icons/delete.png" Width="37" Height="52"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>

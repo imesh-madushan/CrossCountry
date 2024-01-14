@@ -22,14 +22,14 @@
                 </Border.Background>
                 <Grid>
                     <StackPanel Orientation="Vertical">
-                        <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="user4.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
+                        <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="/Icons/user-profile.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
                         <Label x:Name="lableUsername" Margin="20,14,14,14" HorizontalAlignment="Left"  Content="Admin" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
                     </StackPanel>
 
                     <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
                         <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0">
                             <StackPanel Orientation="Horizontal" Width="141">
-                                <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
+                                <Image x:Name="imgDashboardBtn" Source="/Icons/shopping-menu.png" Width="30" Margin="13,0,16,0"/>
                                 <TextBlock x:Name="textDashboardBtn" Text="Items" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
                             </StackPanel>
                         </Button>
@@ -37,7 +37,7 @@
 
                     <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,0,0,12" HorizontalAlignment="Left" Width="157">
                         <StackPanel Orientation="Horizontal" Width="113">
-                            <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
+                            <Image x:Name="imgLogOutBtn" Source="/Icons/logout.png" Width="30" Margin="0,0,10,0"/>
                             <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
                         </StackPanel>
                     </Button>
