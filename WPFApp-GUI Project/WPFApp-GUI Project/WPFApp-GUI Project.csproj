@@ -22,6 +22,17 @@
     <None Remove="I1.jpg" />
     <None Remove="I2.jpg" />
     <None Remove="I3.jpg" />
+    <None Remove="Icons\add-to-cart.png" />
+    <None Remove="Icons\add-to-cart1.png" />
+    <None Remove="Icons\cart-menu.png" />
+    <None Remove="Icons\history-menu.png" />
+    <None Remove="Icons\logout.png" />
+    <None Remove="Icons\settings-menu.png" />
+    <None Remove="Icons\settings-menu2.png" />
+    <None Remove="Icons\user1.png" />
+    <None Remove="Icons\user4.png" />
+    <None Remove="Icons\user5.png" />
+    <None Remove="Icons\user6.png" />
     <None Remove="logo %281%29.jpg" />
     <None Remove="logo.jpg" />
     <None Remove="logo2.png" />
@@ -86,6 +97,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Icons\add-to-cart.png" />
+    <Resource Include="Icons\add-to-cart1.png" />
+    <Resource Include="Icons\cart-menu.png" />
+    <Resource Include="Icons\history-menu.png" />
+    <Resource Include="Icons\logout.png" />
+    <Resource Include="Icons\settings-menu.png" />
+    <Resource Include="Icons\settings-menu2.png" />
+    <Resource Include="Icons\user1.png" />
+    <Resource Include="Icons\user4.png" />
+    <Resource Include="Icons\user5.png" />
+    <Resource Include="Icons\user6.png" />
     <Resource Include="products\I1.jpg" />
     <Resource Include="products\I10.jpg" />
     <Resource Include="products\I11.jpg" />
@@ -131,10 +153,6 @@
     <Resource Include="user6.png" />
     <Resource Include="userProfile1.png" />
     <Resource Include="wp8994765-dark-batman-4k-wallpapers.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Icons\" />
   </ItemGroup>
 
 </Project>

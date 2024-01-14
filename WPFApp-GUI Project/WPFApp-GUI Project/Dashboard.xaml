@@ -8,7 +8,8 @@
         Title="Dashboard"
         ResizeMode="CanResizeWithGrip"
         
-        Height="630" Width="1005" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+        Height="732" Width="1128" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+    
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
             <Grid>
@@ -30,25 +31,25 @@
                         </StackPanel>
 
                         <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0" MouseEnter="buttonSidebarAny_MouseEnter" MouseLeave="buttonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
                                 <StackPanel Orientation="Horizontal" Width="141">
                                     <Image x:Name="imgDashboardBtn" Source="/store (3).png" Width="30" Margin="13,0,16,0"/>
                                     <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="buttonSidebarAny_MouseEnter" MouseLeave="buttonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgSettingsBtn" Source="/settings2.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}"  Width="158" Margin="-7,15,0,0" MouseEnter="buttonSidebarAny_MouseEnter" MouseLeave="buttonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonHistpry" Background="{x:Null}" Height="48" BorderBrush="{x:Null}"  Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgHistoryBtn" Source="/history1.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
                                 </StackPanel>
                             </Button>
-                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="buttonSidebarAny_MouseEnter" MouseLeave="buttonSidebarAny_MouseLeave">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave">
                                 <StackPanel Orientation="Horizontal" Width="113">
                                     <Image x:Name="imgCartBtn" Source="/grocery-store.png" Width="30" Margin="0,0,16,0"/>
                                     <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
@@ -56,7 +57,7 @@
                             </Button>
                         </StackPanel>
 
-                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="buttonLogOut_MouseEnter" MouseLeave="buttonLogOut_MouseLeave">
+                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="ButtonLogOut_MouseEnter" MouseLeave="ButtonLogOut_MouseLeave">
                             <StackPanel Orientation="Horizontal" Width="113">
                                 <Image x:Name="imgLogOutBtn" Source="/exit2.png" Width="30" Margin="0,0,10,0"/>
                                 <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
@@ -73,15 +74,17 @@
             <ScrollViewer Margin="163,101,0,10">
                 <WrapPanel x:Name="wrapPanelItems">
                     
+                    <!--USED TO CREATE ITEMS 
                     <Grid x:Name="I1" Height="190" Width="233">
                         <Border CornerRadius="15" BorderBrush="#FF22B886" BorderThickness="2" Margin="20,25,20,0"/>
                         <Image HorizontalAlignment="Center" Source="/products/I8.jpg" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Width="151" Height="136" Stretch="UniformToFill" Margin="0,30,0,0"/>
                         <Label Name="lablePriceI001" Content="LKR  10000" Margin="33,34,102,126" FontFamily="Segoe UI Variable Small Semibold" FontSize="14"/>
                         <Label Name="lableQtyI001" Content="Qty  23" Margin="144,32,17,127" FontFamily="Segoe UI Variable Small Semibold" FontSize="14"/>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,151,0,0" Width="72" Height="26" Style="{StaticResource RoundedButtonBuyStyle}" Click="buyButton_Click" FontFamily="Segoe UI Variable Small Semibold" FontSize="11" MouseEnter="ButtonBuyNow_MouseEnter" BorderThickness="0,0,0,0" MouseLeave="Button_MouseLeave"/>
-                        <Button Margin="160,151,39,0" Style="{StaticResource PngButtonStyle}" Height="25" VerticalAlignment="Top" Click="addToCartButton_Click" Width="NaN" BorderBrush="White" Foreground="White" Background="White">
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,151,0,0" Width="72" Height="26" Style="{StaticResource RoundedButtonBuyStyle}" Click="BuyButton_Click" FontFamily="Segoe UI Variable Small Semibold" FontSize="11" MouseEnter="ButtonBuyNow_MouseEnter" BorderThickness="0,0,0,0" MouseLeave="ButtonBuyNow_MouseLeave"/>
+                        <Button Margin="160,151,39,0" Style="{StaticResource PngButtonStyle}" Height="25" VerticalAlignment="Top" Click="AddToCartButton_Click" Width="NaN" BorderBrush="White" Foreground="White" Background="White">
                         </Button>
                     </Grid>
+                    -->
                     
                 </WrapPanel>
             </ScrollViewer>
