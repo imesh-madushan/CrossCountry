@@ -134,6 +134,7 @@
     <None Remove="user%285%29.png" />
     <None Remove="user.png" />
     <None Remove="user4.png" />
+    <None Remove="user5.png" />
     <None Remove="user6.png" />
     <None Remove="userProfile1.png" />
     <None Remove="wp8994765-dark-batman-4k-wallpapers.jpg" />
@@ -194,10 +195,7 @@
     <Resource Include="products\I016.jpg" />
     <Resource Include="products\I017.jpg" />
     <Resource Include="products\I018.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="220391.jpg" />
+    <Resource Include="user5.png" />
   </ItemGroup>
 
 </Project>

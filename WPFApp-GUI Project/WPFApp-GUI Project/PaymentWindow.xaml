@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WPFApp_GUI_Project"
         mc:Ignorable="d"
         Background="{x:Null}"
-        Title="PaymentWindow" Height="600" Width="910">
+        WindowStartupLocation="CenterScreen"
+        Title="PaymentWindow" Height="650" Width="960">
 
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
@@ -71,21 +72,24 @@
                     <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="10,87,10,0" VerticalAlignment="Top" >
                     </Border>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,101,0,0">
-                        <Border CornerRadius="50" BorderThickness="2" Height="192" Margin="0,5,0,0" Background="White" HorizontalAlignment="Center" Width="436">
-                            <StackPanel Orientation="Horizontal" Margin="0,0,-2,-2">
-                                <Border BorderBrush="Aquamarine" BorderThickness="16" Width="155" Height="155" CornerRadius="65" Margin="20,0,0,2" VerticalAlignment="Center">
-                                    <Border.Background>
-                                        <ImageBrush/>
-                                    </Border.Background>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,-2,-2" Height="243">
+                            <StackPanel Orientation="Vertical" Width="202">
+                                <Label x:Name="labelQtyLeft" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="00 Left" Height="35" Margin="0,30,0,5" FontSize="20" Width="202" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <Border x:Name="borderBuyItem" BorderBrush="Aquamarine" BorderThickness="16" Width="154" Height="155" CornerRadius="65">
+                                    <!-- Image will be injected from backend 
+                                        <Border.Background>
+                                        <ImageBrush ImageSource="/products/I001.jpg"/>
+                                        </Border.Background> 
+                                        -->
                                 </Border>
-                                <StackPanel Orientation="Vertical" Width="208" Height="194">
-                                    <Label  Content=" Enter Quantity" Height="38" Margin="30,30,0,0" VerticalAlignment="Center" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold"/>
-                                    <TextBox MaxLength="2" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="1" Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="25,3,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Segoe UI Variable Small Semibold"/>
-                                    <Label HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="Total: 20000 LKR" Height="38" Margin="20,23,0,0" FontSize="20" Width="204" FontFamily="Segoe UI Variable Small Semibold"/>
-                                </StackPanel>
                             </StackPanel>
-                        </Border>
-                        <Border CornerRadius="50" BorderBrush="Aquamarine" BorderThickness="8,8,8,8" Margin="0,24,0,0" HorizontalAlignment="Center" Width="451" Height="229">
+                            <StackPanel Orientation="Vertical" Width="195" Height="214" Margin="0,15,0,0">
+                                <Label HorizontalContentAlignment="Center" Content=" Enter Quantity" Height="38" Margin="0,45,0,0" VerticalAlignment="Center" FontSize="18" Width="165" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox HorizontalAlignment="Center" MaxLength="2" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="1" Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="0,3,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <Label HorizontalContentAlignment="Center" Content="Total: 00000 LKR" Height="38" Margin="0,45,0,0" FontSize="22" Width="197" FontFamily="Franklin Gothic Medium Cond"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <Border CornerRadius="35" BorderBrush="Aquamarine" BorderThickness="8,8,8,8" Margin="0,24,0,0" HorizontalAlignment="Center" Width="451" Height="229">
                             <Grid>
                                 <Label  Content="Card Number" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="46,35,218,0" VerticalAlignment="Top" />
                                 <Label  Content="Exp Date" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="91,86,173,0" VerticalAlignment="Top" />
@@ -95,7 +99,7 @@
                                 <TextBox MaxLength="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,140,141,0" VerticalAlignment="Top"/>
                             </Grid>
                         </Border>
-                        <Button BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Pay" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-30,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="22" HorizontalAlignment="Center" Height="47"/>
+                        <Button BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="Pay" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-30,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="22" HorizontalAlignment="Center" Height="47" MouseEnter="ButtonPay_MouseEnter" MouseLeave="ButtonPay_MouseLeave"/>
                     </StackPanel>
                 </Grid>
 
