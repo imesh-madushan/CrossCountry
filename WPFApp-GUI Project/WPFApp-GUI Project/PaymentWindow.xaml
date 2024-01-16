@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Background="{x:Null}"
         WindowStartupLocation="CenterScreen"
-        Title="PaymentWindow" Height="650" Width="960">
+        Title="PaymentWindow" Height="685" Width="995">
 
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>

@@ -20,15 +20,21 @@ namespace WPFApp_GUI_Project
         public CartWindow()
         {
             InitializeComponent();
+            ReadCartFromDB();
         }
+        private void ReadCartFromDB()
+        {
+            //Implement the database read code here
 
-        
-        private void buttonLogOut_Click(object sender, RoutedEventArgs e)
+            string itemName = "I003";
+            int cartQty = 23;
+            double cartPrice = 12000;
+            CreateCartItems(itemName, cartQty, cartPrice);
+        }
+        private void CreateCartItems(string itemName, int cartQty, double cartPrice)
         {            
-            Grid newGrid = new Grid();
-            newGrid.Name = "I" + itemCount;
-
-            string cartImagePath = $"{newGrid.Name}.jpg";
+           /* Grid newGrid = new Grid();
+            newGrid.Name = itemName;
 
             // Create Border
             Border border = new Border();
@@ -48,7 +54,7 @@ namespace WPFApp_GUI_Project
             // Create ImageBrush
             ImageBrush imageBrush = new ImageBrush();
             //imageBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/{cartImagePath}", UriKind.Absolute));
-            imageBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/products/{cartImagePath}", UriKind.Absolute));
+            imageBrush.ImageSource = new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/products/{newGrid.Name}.jpg", UriKind.Absolute));
 
             // Create Image Border
             Border imageBorder = new Border();
@@ -65,7 +71,7 @@ namespace WPFApp_GUI_Project
 
             // Create Labels
             Label label1 = new Label();
-            label1.Content = "Quantity 3";
+            label1.Content = $"Qty {cartQty}";
             label1.Height = 38;
             label1.Margin = new Thickness(30, 0, 0, 0);
             label1.VerticalAlignment = VerticalAlignment.Center;
@@ -74,7 +80,7 @@ namespace WPFApp_GUI_Project
             label1.FontFamily = new FontFamily("Calibri");
 
             Label label2 = new Label();
-            label2.Content = "6000 LKR";
+            label2.Content = $"Total: {cartPrice} LKR";
             label2.Height = 38;
             label2.Margin = new Thickness(30, 0, 0, 0);
             label2.VerticalAlignment = VerticalAlignment.Center;
@@ -112,7 +118,7 @@ namespace WPFApp_GUI_Project
             deleteButtonStackPanel.Width = 55;
 
             Image deleteImage = new Image();
-            deleteImage.Source = new BitmapImage(new Uri("/delete (1).png", UriKind.Relative));
+            deleteImage.Source = new BitmapImage(new Uri("/Icons/delete.png", UriKind.Relative));
             deleteImage.Width = 37;
             deleteImage.Height = 52;
 
@@ -133,16 +139,10 @@ namespace WPFApp_GUI_Project
 
             // Add the new Grid to your existing container (e.g., a parent Grid or a StackPanel)
             // For example, if your parent container is a Grid named "mainGrid":
-            stackPanelCart.Children.Add(newGrid);
+            stackPanelCart.Children.Add(newGrid);*/
 
-            // Increment the item counter for the next item
-            itemCount++;
 
-            if (sender is Button button && button.Parent is StackPanel sP && sP.Parent is Grid mainGrid)
-            {
-                string mainGridName = mainGrid.Name;
-                MessageBox.Show("Clicked item: " + mainGridName);
-            }
+
         }
 
         private void buttonCartBuyNow_Click(object sender, RoutedEventArgs e)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TWXcUxIzFhFT9PL2/Doog76Tx0iFF2OIRm4xYhOYmUFVd/LpPhldUGTOy0wyqUqA6J4NRE1RqyQPvNNquM2mqw==",
+  "dgSpecHash": "8R2FPd8hrjdU7wI0RwykSHqaWGywr4nvgAFEPIqiZtZdKPwbVHnUknmP+Le/dLMJ77yMJmGjC6xyHZcfvBailQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imesh\\Documents\\P R O J E C T S\\Github\\GUI-Final-Project\\WPFApp-GUI Project\\WPFApp-GUI Project\\WPFApp-GUI Project.csproj",
+  "projectFilePath": "C:\\Users\\imesh\\Documents\\P R O J E C T S\\Github\\GUI-final-project\\WPFApp-GUI Project\\WPFApp-GUI Project\\WPFApp-GUI Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imesh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\imesh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
