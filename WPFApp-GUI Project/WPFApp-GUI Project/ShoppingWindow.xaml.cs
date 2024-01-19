@@ -169,10 +169,10 @@ namespace WPFApp_GUI_Project
                 if (clickedButton.Parent is Grid clickedGrid)
                 {
                     string gridName = clickedGrid.Name;
-                    PaymentWindow payment = new PaymentWindow();
+                    /*PaymentWindow payment = new PaymentWindow();
                     payment.getItemID(gridName);
                     payment.Show();
-                    this.Hide();
+                    this.Hide();*/
                 }
             }
         }
@@ -189,16 +189,16 @@ namespace WPFApp_GUI_Project
         }
         private void ButtonProfileSetting_Click(object sender, RoutedEventArgs e)
         {
-            CustomerSettings windoCall = new CustomerSettings();
+            /*CustomerSettings windoCall = new CustomerSettings();
             windoCall.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void ButtonHistory_Click(object sender, RoutedEventArgs e)
         {
-            HistoryWindow windowCall = new HistoryWindow();
+            /*HistoryWindow windowCall = new HistoryWindow();
             windowCall.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void ButtonCart_Click(object sender, RoutedEventArgs e)

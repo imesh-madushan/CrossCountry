@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace WPFApp_GUI_Project
 {
-    public partial class CartWindow : Window
+    public partial class CartWindow : UserControl
     {
         private int itemCount = 1;
         public CartWindow()

@@ -17,7 +17,7 @@ namespace WPFApp_GUI_Project
     /// <summary>
     /// Interaction logic for CustomerSettings.xaml
     /// </summary>
-    public partial class CustomerSettings : Window
+    public partial class CustomerSettings : UserControl
     {
         public CustomerSettings()
         {

@@ -17,7 +17,7 @@ namespace WPFApp_GUI_Project
     /// <summary>
     /// Interaction logic for PaymentWindow.xaml
     /// </summary>
-    public partial class PaymentWindow : Window
+    public partial class PaymentWindow : UserControl
     {
         string itemName;
         int itemQtyLeft = 22; 

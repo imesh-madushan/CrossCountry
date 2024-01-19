@@ -17,7 +17,7 @@ namespace WPFApp_GUI_Project
     /// <summary>
     /// Interaction logic for HistoryWindow.xaml
     /// </summary>
-    public partial class HistoryWindow : Window
+    public partial class HistoryWindow : UserControl
     {
         public HistoryWindow()
         {
