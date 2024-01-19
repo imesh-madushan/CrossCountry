@@ -46,3 +46,5 @@ C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Pro
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.csproj.AssemblyReference.cache
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\WPFApp-GUI Project.csproj.CopyComplete
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\UCCart.g.cs
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\UCCart.baml

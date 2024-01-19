@@ -71,6 +71,9 @@
             </Border>
             <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="165,87,5,0" VerticalAlignment="Top" >
             </Border>
+            
+            <ContentControl x:Name="ContentControl" Margin="163,0,0,0"/>
+            
             <ScrollViewer Margin="163,104,0,11">
                 <WrapPanel x:Name="wrapPanelItems">
                     

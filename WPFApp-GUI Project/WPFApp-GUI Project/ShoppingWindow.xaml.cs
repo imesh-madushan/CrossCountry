@@ -203,9 +203,10 @@ namespace WPFApp_GUI_Project
 
         private void ButtonCart_Click(object sender, RoutedEventArgs e)
         {
-            CartWindow windowCall = new CartWindow();
+            /*CartWindow windowCall = new CartWindow();
             windowCall.Show();
-            this.Hide();
+            this.Hide();*/
+            ContentControl.Content = new UCCart();
         }
 
         private void buttonLogOut_Click(object sender, RoutedEventArgs e)

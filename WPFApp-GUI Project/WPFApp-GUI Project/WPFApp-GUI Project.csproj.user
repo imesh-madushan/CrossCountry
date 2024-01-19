@@ -31,6 +31,9 @@
     <Compile Update="RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UCCart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminDashboard.xaml">
@@ -67,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\RoundedItems.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCCart.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
