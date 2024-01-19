@@ -24,31 +24,17 @@ namespace WPFApp_GUI_Project
         public AdminDashboard()
         {
             InitializeComponent();
+            LoadDefault();
         }
 
-        private void textBoxItemID_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (textBoxItemID.Text == "I003")//remove this line used for testing
-            {
-                borderAadminAddItem.Background = new ImageBrush(new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/products/{itemName}.jpg", UriKind.Absolute)));
-                labelQty.Content = $"{itemQty} Left";
-            }
-            else
-            {
-                if (textBoxItemID.Text.Length == 4)
-                {
-                    labelQty.Foreground = Brushes.Red;
-                    labelQty.Content = "Invalid Item ID";
-                }
-                else
-                {
-                    labelQty.Foreground = Brushes.Black;
-                    labelQty.Content = "";
-                }
-                borderAadminAddItem.Background = null;
-            }
-        }
         //Button Click
+
+        public void LoadDefault()
+        {
+            AdminUpdateStock adminUpdateStock = new AdminUpdateStock();
+            ContentDisplay.Children.Clear();
+            ContentDisplay.Children.Add(adminUpdateStock);
+        }
         private void ButtonLogOut_Click(object sender, RoutedEventArgs e)
         {
             MainWindow windowCall = new MainWindow();
@@ -58,25 +44,17 @@ namespace WPFApp_GUI_Project
         private void ButtonDashboard_Click(object sender, RoutedEventArgs e)
         {
             
-        }
-        //Button Enter and Leave
-        private void ButtonConfirm_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (sender is Button button)
-            {
-                button.BorderBrush = Brushes.Black;
-                button.BorderThickness = new Thickness(1.5);
-            }
+            ShoppingUC shoppingUC = new ShoppingUC();
+            shoppingUC.Creater("admin");
+            ContentDisplay.Children.Clear();
+            ContentDisplay.Children.Add(shoppingUC);
         }
 
-        private void ButtonConfirm_MouseLeave(object sender, MouseEventArgs e)
+        private void ButtonUpdateStock_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button)
-            {
-                button.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 95, 237, 203));
-                button.BorderThickness = new Thickness(1.8);
-            }
+            LoadDefault();
         }
+        //Button Enter and Leave
 
         private void ButtonSidebarAny_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -92,5 +70,7 @@ namespace WPFApp_GUI_Project
                 button.Background = Brushes.Transparent;
             }
         }
+
+        
     }
 }

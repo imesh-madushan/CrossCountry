@@ -13,25 +13,28 @@
     <Compile Update="AdminLoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CartWindow.xaml.cs">
+    <Compile Update="AdminUpdateStock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CustomerSettings.xaml.cs">
+    <Compile Update="CartUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomerSettingsUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HistoryUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PaymentUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShoppingUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ShoppingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="HistoryWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="PaymentWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="RegisterWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UCCart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -42,22 +45,28 @@
     <Page Update="AdminLoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="CartWindow.xaml">
+    <Page Update="AdminUpdateStock.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="CustomerSettings.xaml">
+    <Page Update="CartUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerSettingsUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HistoryUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PaymentUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShoppingUC.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ShoppingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="HistoryWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="PaymentWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterWindow.xaml">
@@ -70,9 +79,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\RoundedItems.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UCCart.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Background="{x:Null}"
-        Title="AdminDashboard"  Height="600" Width="920">
+        Title="AdminDashboard"  Height="732" Width="1128">
     <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -34,6 +34,12 @@
                                 <TextBlock x:Name="textDashboardBtn" Text="Items" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0" MouseEnter="ButtonSidebarAny_MouseEnter"/>
                             </StackPanel>
                         </Button>
+                        <Button Style="{StaticResource RoundedButtonStyle}" x:Name="buttonUpdateStock" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,30,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonUpdateStock_Click">
+                            <StackPanel Orientation="Horizontal" Width="141">
+                                <Image x:Name="imgUpdateStockdBtn" Source="/Icons/system-update.png" Width="30" Margin="13,0,16,0"/>
+                                <TextBlock x:Name="textUpdateStockdBtn" Text="Stock" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0" MouseEnter="ButtonSidebarAny_MouseEnter"/>
+                            </StackPanel>
+                        </Button>
                     </StackPanel>
 
                     <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,0,0,12" HorizontalAlignment="Left" Width="157" Click="ButtonLogOut_Click">
@@ -46,41 +52,8 @@
             </Border>
             <Grid Grid.Column="1">
 
-                <Grid>
-                    <Border RenderTransformOrigin="0.5,0.5" Height="93" VerticalAlignment="Top">
-                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Update Stock" FontSize="40" Margin="-2,0,0,0" FontFamily="Segoe UI Variable Display Semibold"/>
-                    </Border>
-                    <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="10,87,10,0" VerticalAlignment="Top" >
-                    </Border>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="682" Margin="0,106,0,0">
-                        <Label Content=" Enter Quantity to add and Confirm action" Height="56" Margin="30,38,0,0" FontSize="20" Width="388" Background="{x:Null}" FontFamily="Gadugi"/>
-                        <Border CornerRadius="19" BorderBrush="Aquamarine"  BorderThickness="7" Height="263" Margin="0,12,0,0" Background="White" HorizontalAlignment="Center" Width="622">
-
-                            <StackPanel Orientation="Horizontal" Margin="0,0,-2,-2">
-                                <StackPanel Orientation="Vertical" Height="208" Margin="42,20,0,0">
-                                    <Border x:Name="borderAadminAddItem" HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="14" Width="155" Height="155" CornerRadius="65" VerticalAlignment="Center">
-                                        <!-- Image will be injected from backend
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="/products/I001.jpg"/>
-                                        </Border.Background>
-                                        -->
-                                    </Border>
-                                    <Label x:Name="labelQty" Content="Left" HorizontalContentAlignment="center" Height="38" FontSize="20" Width="153" FontFamily="Segoe UI Variable Small Semibold" Margin="0,3,0,0"/>
-                                </StackPanel>
-                                <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Width="354" Height="98" Margin="0,0,0,30">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label  Content=" Enter Item ID" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="20" Width="165" HorizontalAlignment="Left" FontFamily="Segoe UI Variable Small Semibold"/>
-                                        <TextBox x:Name="textBoxItemID" MaxLength="4" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="MS Reference Sans Serif" HorizontalAlignment="Left" TextChanged="textBoxItemID_TextChanged"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                                        <Label  Content=" Enter Quantity" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" HorizontalAlignment="Left"/>
-                                        <TextBox x:Name="textBoxQty" MaxLength="2" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="MS Reference Sans Serif" HorizontalAlignment="Left"/>
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
-                        </Border>
-                        <Button BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="CONFIRM" Style="{StaticResource RoundedButtonStyle}" Width="170" Margin="0,-31,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="20" HorizontalAlignment="Center" Height="47" MouseEnter="ButtonConfirm_MouseEnter" MouseLeave="ButtonConfirm_MouseLeave"/>
-                    </StackPanel>
+                <Grid x:Name="ContentDisplay">
+                    
                 </Grid>
 
             </Grid>

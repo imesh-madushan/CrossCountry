@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WPFApp_GUI_Project.HistoryUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp_GUI_Project"
+             mc:Ignorable="d" 
+             d:DesignHeight="716" d:DesignWidth="965">
+    <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
+        <Grid>
+            <Grid Grid.ColumnSpan="2">
+                <Border Margin="0,0,5,0" RenderTransformOrigin="0.5,0.5" Height="93" VerticalAlignment="Top">
+                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Order History" FontSize="40" Margin="-2,0,-73,0" FontFamily="Segoe UI Variable Display Semibold"/>
+                </Border>
+                <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="0,87,3,0" VerticalAlignment="Top" >
+                </Border>
+                <ScrollViewer Margin="0,101,3,8">
+                    <StackPanel x:Name="stackPanelHistory" Orientation="Vertical">
+
+                        <Grid>
+                            <Border BorderThickness="4" CornerRadius="39" Height="92" Margin="80,18,80,0" BorderBrush="Aquamarine" />
+                            <StackPanel Orientation="Horizontal" Margin="82,18,81,0">
+                                <Border BorderBrush="#FF12645E" BorderThickness="2" Width="75" Height="75" CornerRadius="48" Margin="10,0,0,0" VerticalAlignment="Center">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="/products/I001.jpg"/>
+                                    </Border.Background>
+                                </Border>
+                                <Label VerticalContentAlignment="Center" Content="Quantity " Height="38" Margin="40,0,0,0" VerticalAlignment="Center" FontSize="17" Width="114" FontFamily="Calibri"/>
+                                <Label VerticalContentAlignment="Center" Content=" LKR" Height="38" Margin="40,0,0,0" VerticalAlignment="Center" FontSize="17" Width="114" FontFamily="Calibri"/>
+                                <Label VerticalContentAlignment="Center" Content=" Date: " Height="38" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="17" Width="114" FontFamily="Calibri"/>
+                                <TextBox SelectionBrush="{x:Null}" Focusable="False" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" VerticalContentAlignment="Center" TextAlignment="Left" Height="82" Margin="25,0,0,0" VerticalAlignment="Center" FontSize="17" Width="177" FontFamily="Calibri" Text="M.D Dissanayake, NO 198 Akmeemana, Galle" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

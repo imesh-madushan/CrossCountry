@@ -52,6 +52,7 @@
     <None Remove="Icons\settings-menu.png" />
     <None Remove="Icons\settings-menu2.png" />
     <None Remove="Icons\shopping-menu.png" />
+    <None Remove="Icons\system-update.png" />
     <None Remove="Icons\user-profile.png" />
     <None Remove="Icons\user1.png" />
     <None Remove="Icons\user4.png" />
@@ -173,6 +174,7 @@
     <Resource Include="Icons\settings-menu.png" />
     <Resource Include="Icons\settings-menu2.png" />
     <Resource Include="Icons\shopping-menu.png" />
+    <Resource Include="Icons\system-update.png" />
     <Resource Include="Icons\user-profile.png" />
     <Resource Include="Icons\user1.png" />
     <Resource Include="Icons\user5.png" />
