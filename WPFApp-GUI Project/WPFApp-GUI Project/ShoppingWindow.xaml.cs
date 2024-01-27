@@ -23,6 +23,8 @@ namespace WPFApp_GUI_Project
     /// </summary>
     public partial class ShoppingWindow : Window
     {
+        private string loggedUsername;
+        private string loggedUserID;
         
         public ShoppingWindow()
         {
@@ -35,6 +37,13 @@ namespace WPFApp_GUI_Project
             shoppingUC.Creater("customer");
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(shoppingUC);
+        }
+
+        public void SetLoggedUserDetail(string username, string userID)
+        { 
+            loggedUsername = username;
+            loggedUserID = userID;
+            labelProfileUsername.Content = loggedUsername;
         }
         
         //Button Clicks

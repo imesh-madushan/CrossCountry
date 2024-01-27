@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,27 +16,72 @@ using System.Windows.Shapes;
 
 namespace WPFApp_GUI_Project
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    /// 
+    
     public partial class MainWindow : Window
     {
-        string username;
-        string password;
+        CreateDBconnection con = new CreateDBconnection();
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void UserValidating(string username, string password)
+        {
+            int cusAvailability = 999;
+            string cusID;
+
+            try
+            {   
+                //Check for username and password match
+                string sqlcheck = $"SELECT COUNT(*) FROM Customer WHERE Cus_Username = '{username}' AND Cus_Password = '{password}'";
+                SqlCommand cmdcheck = new SqlCommand(sqlcheck, con.GetDBconnetion());
+                cusAvailability = Convert.ToInt32(cmdcheck.ExecuteScalar());
+
+
+                //If one result was found after ExecuteScalar
+                if (cusAvailability == 1)
+                {
+                    //Get ther Cus_ID from that user 
+                    string sqlgetid = $"SELECT Cus_Id FROM Customer WHERE Cus_Username = '{username}' AND Cus_Password = '{password}'";
+                    SqlCommand cmdgetid = new SqlCommand(sqlgetid, con.GetDBconnetion());
+                    cusID = cmdgetid.ExecuteScalar().ToString();
+                   
+                    //Opening Shopping window after succesful login
+                    ShoppingWindow spwindow = new ShoppingWindow();
+
+                    //Pass username and it's Cus_ID Shopping window as parameters
+                    spwindow.SetLoggedUserDetail(username, cusID); 
+                    spwindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    lableLoginValidate.Content = "Invalid Login !";
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //Buton Clicks
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            username = TextBoxUsername.Text;
-            password = PasswordBoxPassword.Password;
-
+            if (!String.IsNullOrWhiteSpace(TextBoxUsername.Text) && !String.IsNullOrWhiteSpace(PasswordBoxPassword.Password))
+            {
+                string username = TextBoxUsername.Text;
+                string password = PasswordBoxPassword.Password;
+                UserValidating(username, password);
+            }
+            else
+            {
+                lableLoginValidate.Content = "Username or Password cannot be empty !";
+            }            
         }
-        //Buton Clicks
+
+
         private void ButtonRegistor_Click(object sender, RoutedEventArgs e)
         {
             RegisterWindow windowCaller = new RegisterWindow();
@@ -48,6 +94,7 @@ namespace WPFApp_GUI_Project
             windowCall.Show();
             this.Close();
         }
+
 
         //Mouse Enter and Leave
         private void ButtonLogin_MouseEnter(object sender, MouseEventArgs e)
@@ -137,6 +184,13 @@ namespace WPFApp_GUI_Project
                 button.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 41, 24, 112));
                 button.Foreground = new SolidColorBrush(Color.FromArgb(255, 73, 30, 137));
             }
+        }
+
+
+        //Text changed
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            lableLoginValidate.Content = string.Empty;
         }
     }
 }
