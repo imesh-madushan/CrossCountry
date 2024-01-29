@@ -45,6 +45,11 @@ namespace WPFApp_GUI_Project
             loggedUserID = userID;
             labelProfileUsername.Content = loggedUsername;
         }
+
+        public string getLoggedID()
+        { 
+            return loggedUserID;
+        }
         
         //Button Clicks
         private void ButtonDashboard_Click(object sender, RoutedEventArgs e)
@@ -53,7 +58,7 @@ namespace WPFApp_GUI_Project
         }
         private void ButtonProfileSetting_Click(object sender, RoutedEventArgs e)
         {
-            CustomerSettingsUC customerSettingsUC = new CustomerSettingsUC();
+            CustomerSettingsUC customerSettingsUC = new CustomerSettingsUC(loggedUserID, loggedUsername);
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(customerSettingsUC);
         }

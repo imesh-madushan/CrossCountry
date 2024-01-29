@@ -188,7 +188,7 @@ namespace WPFApp_GUI_Project
                     
                     PaymentUC pay = new PaymentUC();
 
-                    pay.getItemID(gridName);
+                    pay.setItem(gridName);
 
                     //Display payment usercontrol
                     if (Window.GetWindow(this) is ShoppingWindow shoppingWindow)

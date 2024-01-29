@@ -27,7 +27,7 @@
                     <Grid>
                         <StackPanel Orientation="Vertical">
                             <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="/Icons/user-profile.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
-                            <Label x:Name="labelProfileUsername" Margin="18,14,14,14" HorizontalAlignment="Center"  Content="Username" Width="100" FontSize="18" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
+                            <Label x:Name="labelProfileUsername" Margin="18,14,14,14" HorizontalAlignment="Center"  Content="Username" Width="133" FontSize="16" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
                         </StackPanel>
 
                         <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">

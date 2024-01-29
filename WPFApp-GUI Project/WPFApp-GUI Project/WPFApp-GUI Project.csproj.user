@@ -22,6 +22,9 @@
     <Compile Update="CustomerSettingsUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MsgWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HistoryUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CustomerSettingsUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MsgWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HistoryUC.xaml">

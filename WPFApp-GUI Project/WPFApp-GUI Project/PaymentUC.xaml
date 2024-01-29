@@ -17,7 +17,7 @@
                     <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="0,87,3,0" VerticalAlignment="Top" >
                     </Border>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,101,0,0">
-                        <StackPanel Orientation="Horizontal" Margin="0,15,-2,-2" Height="243">
+                        <StackPanel Orientation="Horizontal" Margin="0,-5,-2,-2" Height="240">
                             <StackPanel Orientation="Vertical" Width="202">
                                 <Label x:Name="labelQtyLeft" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="00 Left" Height="35" Margin="0,30,0,5" FontSize="20" Width="202" FontFamily="Segoe UI Variable Small Semibold"/>
                                 <Border x:Name="borderBuyItem" HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="14" Width="155" Height="155" CornerRadius="65" VerticalAlignment="Center">
@@ -29,22 +29,29 @@
                                 </Border>
                             </StackPanel>
                             <StackPanel Orientation="Vertical" Width="195" Height="214" Margin="0,15,0,0">
-                                <Label HorizontalContentAlignment="Center" Content=" Enter Quantity" Height="38" Margin="0,45,0,0" VerticalAlignment="Center" FontSize="18" Width="165" FontFamily="Segoe UI Variable Small Semibold"/>
-                                <TextBox HorizontalAlignment="Center" MaxLength="2" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="1" Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="0,3,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Segoe UI Variable Small Semibold"/>
-                                <Label HorizontalContentAlignment="Center" Content="Total: 00000 LKR" Height="38" Margin="0,45,0,0" FontSize="22" Width="197" FontFamily="Franklin Gothic Medium Cond"/>
+                                <Label HorizontalContentAlignment="Center" Content=" Enter Quantity" Height="38" Margin="0,45,0,0" FontSize="18" Width="165" FontFamily="Segoe UI Variable Small Semibold"/>
+                                <TextBox x:Name="textBoxBuyQty" HorizontalAlignment="Center" MaxLength="2" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Style="{StaticResource RoundTextBoxRegStyle}"  Height="37" Width="115" Margin="0,3,0,0" VerticalAlignment="Center" FontSize="19" Background="White" FontFamily="Segoe UI Variable Small Semibold" TextChanged="textBoxBuyQty_TextChanged" MinLines="2"/>
+                                <Label x:Name="labelTotal" HorizontalContentAlignment="Center" Content="Total: 00000 LKR" Height="38" Margin="0,45,0,0" FontSize="22" Width="194" FontFamily="Franklin Gothic Medium Cond"/>
                             </StackPanel>
                         </StackPanel>
-                        <Border CornerRadius="35" BorderBrush="Aquamarine" BorderThickness="8,8,8,8" Margin="0,30,0,0" HorizontalAlignment="Center" Width="451" Height="229">
+                        <ComboBox x:Name="comboBoxCountry" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  BorderBrush="White" Width="205" Height="50" FontFamily="Arial Unicode MS" FontSize="17" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Margin="0,10,0,25">
+                            <ComboBoxItem Content="-   Select Address -" IsSelected="True"/>
+                        </ComboBox>
+                        <Border CornerRadius="35" BorderBrush="Aquamarine" BorderThickness="8,8,8,8" HorizontalAlignment="Center" Width="451" Height="235">
                             <Grid>
-                                <Label  Content="Card Number" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="46,35,218,0" VerticalAlignment="Top" />
-                                <Label  Content="Exp Date" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="91,86,173,0" VerticalAlignment="Top" />
-                                <Label  Content="CVV" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="132,134,132,0" VerticalAlignment="Top" />
-                                <TextBox MaxLength="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="210" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,43,31,0" VerticalAlignment="Top"/>
-                                <TextBox MaxLength="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,92,141,0" VerticalAlignment="Top"/>
-                                <TextBox MaxLength="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,140,141,0" VerticalAlignment="Top"/>
+                                <Label  Content="Card Number*" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="45,35,225,0" VerticalAlignment="Top" />
+                                <Label  Content="Exp Date*" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="90,86,180,0" VerticalAlignment="Top" />
+                                <Label  Content="CVV*" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="131,134,139,0" VerticalAlignment="Top" />
+                                <Label x:Name="labelCnumValid" Height="34" FontSize="20" FontFamily="Sitka Small"  VerticalAlignment="Top" Margin="404,41,9,0" Foreground="#FFFF0C0C" />
+                                <Label x:Name="labelExpValid" Height="34" FontSize="20" FontFamily="Sitka Small"  VerticalAlignment="Center" Margin="296,0,112,0" Foreground="#FFFF0C0C" />
+                                <Label x:Name="labelCvvValid" Height="34" FontSize="20" FontFamily="Sitka Small"  VerticalAlignment="Top" Margin="296,140,112,0" Foreground="#FFFF0C0C" />
+
+                                <TextBox x:Name="textBoxCardNum" MaxLength="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="210" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,43,31,0" VerticalAlignment="Top" TextChanged="textBoxCardNum_TextChanged"/>
+                                <TextBox x:Name="textBoxExp" MaxLength="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,92,141,0" VerticalAlignment="Top" TextChanged="textBoxExp_TextChanged"/>
+                                <TextBox x:Name="textBoxCvv" MaxLength="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="30" Style="{StaticResource RoundTextBoxRegStyle}" Margin="188,140,141,0" VerticalAlignment="Top" TextChanged="textBoxCvv_TextChanged"/>
                             </Grid>
                         </Border>
-                        <Button BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="Pay" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-30,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="22" HorizontalAlignment="Center" Height="47" MouseEnter="ButtonPay_MouseEnter" MouseLeave="ButtonPay_MouseLeave"/>
+                        <Button x:Name="buttonPay" BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="Pay" Style="{StaticResource RoundedButtonStyle}" Width="166" Margin="0,-30,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="22" HorizontalAlignment="Center" Height="47" MouseEnter="buttonPay_MouseEnter" MouseLeave="buttonPay_MouseLeave" Click="buttonPay_Click"/>
                     </StackPanel>
                 </Grid>
 

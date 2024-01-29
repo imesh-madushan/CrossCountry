@@ -15,27 +15,31 @@
                 <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="0,87,3,0" VerticalAlignment="Top" >
                 </Border>
                 <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="0,94,0,0">
-                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Height="434" Width="536" Margin="0,75,0,0">
+                    <Label  Content="kindly input only the information you want to update. Leave other fields unchanged if they remain the same." FontSize="16" FontWeight="Bold" Width="834" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,28,0,0"/>
+
+                    <Border CornerRadius="30" BorderThickness="10" BorderBrush="Aquamarine" Height="453" Width="536" Margin="0,10,0,0">
                         <StackPanel Orientation="Vertical" Margin="0,13,29,0">
                             <StackPanel Orientation="Horizontal" Margin="0,30,0,0" RenderTransformOrigin="0.5,0.5">
                                 <Label  Content="Username" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                                <TextBox x:Name="textBoxUsername" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                <Label  Content="Old Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,42,0,0">
                                 <Label  Content="New Password" FontSize="22" FontWeight="Bold" Width="170" Height="49" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                                <TextBox x:Name="textBoxPasswordNew" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBlock  Text=" Old password *"  FontSize="22" FontWeight="Bold" Width="170" Height="28" Foreground="#FFFF2717" FontFamily="Segoe UI Variable Small Semibold" Margin="24,0,0,0"/>
+                                <TextBox x:Name="textBoxPasswordOld" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,55,0,0">
                                 <TextBlock  FontSize="22" FontWeight="Bold" Width="170" Height="55" Foreground="Black" FontFamily="Segoe UI Variable Small Semibold" Margin="24,1,0,0" Text="Add Secondary Address" TextWrapping="Wrap"/>
-                                <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0" Height="78"/>
+                                <TextBox x:Name="textBoxAddressNew" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource RoundTextBoxRegStyle}" BorderBrush="Black" Margin="15,0,0,0" Height="78" TextWrapping="Wrap"/>
                             </StackPanel>
+                            <TextBlock  FontSize="18" FontWeight="Bold" Width="437" Height="34" Foreground="Red" FontFamily="Segoe UI Variable Small Semibold"  Text="Country cannot be changed *" TextWrapping="Wrap" Margin="0,5,0,0"/>
+
                         </StackPanel>
                     </Border>
-                    <Button HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Save" Style="{StaticResource RoundedButtonStyle}" Width="146" Margin="0,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" Height="47"/>
+                    <Button x:Name="buttonSave" HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="3" Background="#FFFFB835" Content="Save" Style="{StaticResource RoundedButtonStyle}" Width="146" Margin="0,-26,0,46" FontFamily="Segoe UI Variable Small Semibold" FontSize="24" Height="47" Click="buttonSave_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>

@@ -50,3 +50,5 @@ C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Pro
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\ShoppingUC.baml
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\AdminUpdateStock.g.cs
 C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\AdminUpdateStock.baml
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\MsgWindow.g.cs
+C:\Users\imesh\Documents\P R O J E C T S\Github\GUI-final-project\WPFApp-GUI Project\WPFApp-GUI Project\obj\Debug\net6.0-windows\MsgWindow.baml
