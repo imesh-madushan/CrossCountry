@@ -23,34 +23,40 @@ namespace WPFApp_GUI_Project
     /// </summary>
     public partial class ShoppingWindow : Window
     {
-        private string loggedUsername;
-        private string loggedUserID;
+        private static string loggedUsername;
+        private static string loggedUserID;
         
         public ShoppingWindow()
         {
             InitializeComponent();
             LoadDefault();
+
         }
         public void LoadDefault()
         {
+            labelProfileUsername.Content = loggedUsername;
+
             ShoppingUC shoppingUC = new ShoppingUC();
             shoppingUC.Creater("customer");
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(shoppingUC);
         }
 
-        public void SetLoggedUserDetail(string username, string userID)
+        public static void SetLoggedUserDetail(string username, string userID)
         { 
             loggedUsername = username;
             loggedUserID = userID;
-            labelProfileUsername.Content = loggedUsername;
         }
 
-        public string getLoggedID()
+        public static string getLoggedID()
         { 
             return loggedUserID;
         }
-        
+        public static string getLoggedUsername()
+        {
+            return loggedUsername;
+        }
+
         //Button Clicks
         private void ButtonDashboard_Click(object sender, RoutedEventArgs e)
         {
@@ -58,7 +64,7 @@ namespace WPFApp_GUI_Project
         }
         private void ButtonProfileSetting_Click(object sender, RoutedEventArgs e)
         {
-            CustomerSettingsUC customerSettingsUC = new CustomerSettingsUC(loggedUserID, loggedUsername);
+            CustomerSettingsUC customerSettingsUC = new CustomerSettingsUC();
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(customerSettingsUC);
         }

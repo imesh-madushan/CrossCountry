@@ -25,7 +25,7 @@ namespace WPFApp_GUI_Project
     {
         CreateDBconnection con = new CreateDBconnection();
 
-        string cusID;
+        private string cusID;
         string dateTime;
 
         string itemName = "I002";
@@ -40,15 +40,13 @@ namespace WPFApp_GUI_Project
         bool qtyReady = true;
 
         string paymentMsg;
+        int msgColorFlag = -1;
 
 
         public PaymentUC()
         {
             InitializeComponent();
             setComboBoxAddress();
-
-            DateTime DT = DateTime.Now;
-            dateTime = DT.ToString();
         }
 
         //Set Items to display
@@ -59,7 +57,7 @@ namespace WPFApp_GUI_Project
             try
             {
                 borderBuyItem.Background = new ImageBrush(new BitmapImage(new Uri($"pack://application:,,,/WPFApp-GUI Project;component/products/{itemID}.jpg", UriKind.Absolute)));
-
+                
                 //Reading Item information from database
                 string sqlReadItem = $"SELECT * FROM Items WHERE Item_ID = '{itemID}'";
                 SqlCommand cmdReadItem = new SqlCommand(sqlReadItem, con.GetDBconnetion());
@@ -84,8 +82,10 @@ namespace WPFApp_GUI_Project
         //Add address to comboBoxAddress
         public void setComboBoxAddress()
         {
-            ShoppingWindow shoppingWindow = new ShoppingWindow();
-            cusID = shoppingWindow.getLoggedID();
+            //Get logged customer ID from ShoppingWindow
+            //// cusID = ShoppingWindow.getLoggedID();
+            cusID = "CusTEX09L6VA";
+            
             //Read and Add customer address to datebase
             string sqlReadAddress = $"SELECT Address FROM Customer_Address WHERE Cus_ID = '{cusID}' ";
 
@@ -96,7 +96,7 @@ namespace WPFApp_GUI_Project
 
                 while (reader.Read())
                 {
-                    comboBoxCountry.Items.Add(reader["Address"].ToString());
+                    comboBoxAddress.Items.Add(reader["Address"].ToString());
                 }
             }
             catch (Exception ex)
@@ -108,42 +108,72 @@ namespace WPFApp_GUI_Project
 
         private void saveOder()
         {
-            //const string sql = "INSERT INTO Orrer (Order_ID, Order_Address, Bill, Oder_Date, Cus_ID) " +
-                               // $"VALUES ('{IDgenarate.createID("Order_ID")}', '{}', '{total}', '{dateTime}', '{cusID}')";
+            DateTime dt = DateTime.Now;
 
-           // SqlCommand cmdSaveOder = new SqlCommand(sql, con.GetDBconnetion());
-            //cmdSaveOder.ExecuteNonQuery();
-            con.GetDBconnetion().Close();
+            string sql = "INSERT INTO Orrder (Order_ID, Order_Address, Bill, Oder_Date, Cus_ID) " +
+                         $"VALUES ('{IDgenarate.createID("Order_ID")}', '{textBoxAddress.Text}', '{total}', '{dt}', '{cusID}')";
+
+            try
+            {
+                SqlCommand cmdSaveOder = new SqlCommand(sql, con.GetDBconnetion());
+                cmdSaveOder.ExecuteNonQuery();
+                con.GetDBconnetion().Close();
+                msgColorFlag = 0;
+            }
+            catch(Exception ex)
+            {
+                msgColorFlag = 1;
+                MessageBox.Show(ex.Message);
+            }
         }
         //Button Clicks
         private void buttonPay_Click(object sender, RoutedEventArgs e)
         {
+            //Validating if all required data has inserted
             if (qtyReady == true)
             {
-                if (cardNumReady == true && cardExpDateReady == true && cardCvvReady == true)
+                if (!String.IsNullOrWhiteSpace(textBoxAddress.Text))
                 {
-                    if (textBoxCardNum.Text.Length < 12 || textBoxExp.Text.Length < 5 || textBoxCvv.Text.Length < 3)
+                    if (cardNumReady == true && cardExpDateReady == true && cardCvvReady == true)
                     {
-                        paymentMsg = "\nPayment failed due to Invalid payment details !";
-
+                        if (textBoxCardNum.Text.Length < 12 || textBoxExp.Text.Length < 5 || textBoxCvv.Text.Length < 3)
+                        {
+                            msgColorFlag = 1;
+                            paymentMsg = "\nPayment failed due to Invalid payment details !";
+                        }
+                        else
+                        {
+                            saveOder();
+                            paymentMsg = "\nPayment Succesfull";
+                        }
                     }
                     else
                     {
-                        saveOder();
-                        paymentMsg = "\nPayment Succesfull";
+                        msgColorFlag = 1;
+                        paymentMsg = "\nPayment failed due to Invalid payment details !";
                     }
                 }
                 else
                 {
-                    paymentMsg = "\nPayment failed due to Invalid payment details !";
-                } 
+                    msgColorFlag = 1;
+                    paymentMsg = "\nPayment failed Please select Shipping Address !";
+                }
             }
             else
             {
+                msgColorFlag = 1;
                 paymentMsg = "\nPayment failed due to Invalid Quntity !";
             }
             
             MsgWindow msgWindow = new MsgWindow();
+            if (msgColorFlag == 0)
+            {
+                msgWindow.textBoxMsg.Foreground = Brushes.Blue;
+            }
+            else if (msgColorFlag == 1)
+            {
+                msgWindow.textBoxMsg.Foreground = Brushes.Red;
+            }
             msgWindow.textBoxMsg.Text = paymentMsg;
             msgWindow.Show();
         }
@@ -264,6 +294,15 @@ namespace WPFApp_GUI_Project
                         cardCvvReady &= false;
                     }
                 }
+            }
+        }
+
+        private void comboBoxAddress_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBoxAddress.SelectedIndex != 0 && sender is ComboBox cmbox) 
+            {
+                textBoxAddress.Text = comboBoxAddress.SelectedItem.ToString();
+                comboBoxAddress.SelectedIndex = 0;
             }
         }
     }

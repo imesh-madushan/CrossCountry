@@ -31,7 +31,32 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
+    <Style x:Key="RoundTextBoxAddressStyle" TargetType="TextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="5, 5, 10, 10">
+                        <Grid>
+                            <ComboBox Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="0" x:Name="comboBoxCountry" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  BorderBrush="White" Width="285" Height="20" FontFamily="Arial Unicode MS" FontSize="11" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Margin="0,0.5,0,0" Visibility="Visible" ClipToBounds="False" SnapsToDevicePixels="False">
+                                <ComboBoxItem Content="- Select Shipping Address -" IsSelected="True" VerticalAlignment="Stretch"/>
+                            </ComboBox>
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FontFamily" Value="Calibri"/>
+        <Setter Property="FontSize" Value="21"/>
+        <Setter Property="Width" Value="270"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
     <!--Register Items-->
     <Style x:Key="RoundTextBoxRegStyle" TargetType="TextBox">
         <Setter Property="Template">

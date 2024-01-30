@@ -28,7 +28,6 @@ namespace WPFApp_GUI_Project
         public ShoppingUC()
         {
             InitializeComponent();
-           // ReadDBItemData();
         }
 
         public void Creater(string userType)

@@ -46,13 +46,14 @@ namespace WPFApp_GUI_Project
                     string sqlgetid = $"SELECT Cus_Id FROM Customer WHERE Cus_Username = '{username}' AND Cus_Password = '{password}'";
                     SqlCommand cmdgetid = new SqlCommand(sqlgetid, con.GetDBconnetion());
                     cusID = cmdgetid.ExecuteScalar().ToString();
-                   
+
+                    //Store logged user details in Shopping window
+                    ShoppingWindow.SetLoggedUserDetail(username, cusID);
+
                     //Opening Shopping window after succesful login
                     ShoppingWindow spwindow = new ShoppingWindow();
-
-                    //Pass username and it's Cus_ID Shopping window as parameters
-                    spwindow.SetLoggedUserDetail(username, cusID); 
                     spwindow.Show();
+                    
                     this.Close();
                 }
                 else

@@ -23,8 +23,8 @@ namespace WPFApp_GUI_Project
     {
         private string loggedUserID;
         private string oldUserName;
-
         private string oldPassword;
+
         private string newUsername;
         private string newPassword;
         private string newAddress;
@@ -39,13 +39,13 @@ namespace WPFApp_GUI_Project
 
         CreateDBconnection con = new CreateDBconnection();
         
-        public CustomerSettingsUC(string loggedUserID, string loggedUsername)
+        public CustomerSettingsUC()
         {
             InitializeComponent();
-            this.loggedUserID = loggedUserID;
-            this.oldUserName = loggedUsername;
+            loggedUserID = ShoppingWindow.getLoggedID();
+            oldUserName = ShoppingWindow.getLoggedUsername();
             
-            textBoxUsername.Text = loggedUsername;
+            textBoxUsername.Text = oldUserName;
         }
                 
         //Validate Details
