@@ -17,7 +17,7 @@
                     <Border CornerRadius="5" Height="14" Background="#FF5FEDCB" Margin="0,87,3,0" VerticalAlignment="Top" >
                     </Border>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,101,0,0">
-                        <StackPanel Orientation="Horizontal" Margin="0,-5,-2,-2" Height="240">
+                        <StackPanel Orientation="Horizontal" Margin="0,-5,-2,-2" Height="229">
                             <StackPanel Orientation="Vertical" Width="202">
                                 <Label x:Name="labelQtyLeft" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="00 Left" Height="35" Margin="0,30,0,5" FontSize="20" Width="202" FontFamily="Segoe UI Variable Small Semibold"/>
                                 <Border x:Name="borderBuyItem" HorizontalAlignment="Center" BorderBrush="Aquamarine" BorderThickness="14" Width="155" Height="155" CornerRadius="65" VerticalAlignment="Center">
@@ -34,14 +34,13 @@
                                 <Label x:Name="labelTotal" HorizontalContentAlignment="Center" Content="Total: 00000 LKR" Height="38" Margin="0,45,0,0" FontSize="22" Width="194" FontFamily="Franklin Gothic Medium Cond"/>
                             </StackPanel>
                         </StackPanel>
-                        <Grid Height="67" Width="270" Margin="0,15,0,25">
-                            <Border CornerRadius="0,0,3,3" BorderThickness="0.5" BorderBrush="Black">
-                                <ComboBox Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" BorderThickness="1" x:Name="comboBoxAddress" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  BorderBrush="White" Width="374" Height="20" FontFamily="Arial Unicode MS" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Visibility="Visible" ClipToBounds="False" SnapsToDevicePixels="False" FontSize="11" SelectionChanged="comboBoxAddress_SelectionChanged">
-                                    <ComboBoxItem Content="- Select Shipping Address -" IsSelected="True" VerticalAlignment="Stretch"/>
-                                </ComboBox>
-                            </Border>
-                            <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextWrapping="Wrap" x:Name="textBoxAddress" Margin="0,22,0,0" FontFamily="Arial Unicode MS" FontSize="11" IsHitTestVisible="False" Focusable="False" BorderBrush="{x:Null}" Background="{x:Null}"/>
+
+                        <Grid Margin="0,25,0,30">
+                            <ComboBox Background="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="1" x:Name="comboBoxAddress" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  BorderBrush="White" Width="190" Height="34" FontFamily="Arial Unicode MS" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsReadOnly="True" Visibility="Visible" ClipToBounds="False" SnapsToDevicePixels="False" FontSize="13">
+                                <ComboBoxItem Content="- Select Shipping Address -" IsSelected="True" VerticalAlignment="Stretch"/>
+                            </ComboBox>
                         </Grid>
+
                         <Border CornerRadius="35" BorderBrush="Aquamarine" BorderThickness="8,8,8,8" HorizontalAlignment="Center" Width="451" Height="235">
                             <Grid>
                                 <Label  Content="Card Number*" Height="38" FontSize="20" Width="165" FontFamily="Segoe UI Variable Small Semibold" Margin="45,35,225,0" VerticalAlignment="Top" />

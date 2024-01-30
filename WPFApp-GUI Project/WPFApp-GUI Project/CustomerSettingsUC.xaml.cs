@@ -198,9 +198,10 @@ namespace WPFApp_GUI_Project
         //Display Update Status msg
         private void displayUpdateStatus()
         {
-            //When no erros in details and any of information ready to update
+            
             if (Flag == 0)
             {
+                //When no erros in details and any of information ready to update
                 if (usernameReady == true || passwordReady == true || addressReady == true)
                 {
                     responsePass += "\n\nDetails Update Success !";
@@ -208,6 +209,8 @@ namespace WPFApp_GUI_Project
                     msg.textBoxMsg.Text = responsePass;
                     msg.textBoxMsg.Foreground = Brushes.Blue;
                     msg.Show();
+
+                    textBoxAddressNew.Text = String.Empty;
                 }
                 //If any of information is not enterd
                 else
@@ -231,8 +234,8 @@ namespace WPFApp_GUI_Project
         //Button Clicks
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
-            responsePass = string.Empty;
-            responseFail = string.Empty;
+            responsePass = String.Empty;
+            responseFail = String.Empty;
             usernameReady = false;
             passwordReady = false;
             addressReady = false;

@@ -31,13 +31,13 @@ namespace WPFApp_GUI_Project
         string itemName = "I002";
         int itemPrice;
         int total;
-        int itemQtyLeft;
-        int buyQty;
+        static int itemQtyLeft;
+        static int buyQty = 0;
 
         bool cardNumReady = false;
         bool cardExpDateReady = false;
-        bool cardCvvReady = false; 
-        bool qtyReady = true;
+        bool cardCvvReady = false;
+        bool qtyReady = false;
 
         string paymentMsg;
         int msgColorFlag = -1;
@@ -46,7 +46,6 @@ namespace WPFApp_GUI_Project
         public PaymentUC()
         {
             InitializeComponent();
-            setComboBoxAddress();
         }
 
         //Set Items to display
@@ -72,6 +71,8 @@ namespace WPFApp_GUI_Project
                 labelQtyLeft.Content = itemQtyLeft + " Left";
                 labelTotal.Content = "Total: " + itemPrice + " LKR";
                 textBoxBuyQty.Text = "1";
+
+                setComboBoxAddress();
             }
             catch (Exception ex)
             {
@@ -83,8 +84,7 @@ namespace WPFApp_GUI_Project
         public void setComboBoxAddress()
         {
             //Get logged customer ID from ShoppingWindow
-            //// cusID = ShoppingWindow.getLoggedID();
-            cusID = "CusTEX09L6VA";
+            cusID = ShoppingWindow.getLoggedID();
             
             //Read and Add customer address to datebase
             string sqlReadAddress = $"SELECT Address FROM Customer_Address WHERE Cus_ID = '{cusID}' ";
@@ -106,33 +106,98 @@ namespace WPFApp_GUI_Project
             }
         }
 
+        //Save oder and updated qty details in database
         private void saveOder()
         {
             DateTime dt = DateTime.Now;
-
-            string sql = "INSERT INTO Orrder (Order_ID, Order_Address, Bill, Oder_Date, Cus_ID) " +
-                         $"VALUES ('{IDgenarate.createID("Order_ID")}', '{textBoxAddress.Text}', '{total}', '{dt}', '{cusID}')";
-
             try
             {
-                SqlCommand cmdSaveOder = new SqlCommand(sql, con.GetDBconnetion());
-                cmdSaveOder.ExecuteNonQuery();
-                con.GetDBconnetion().Close();
+                // Save DATA ON Order table
+                string sqlSaveOrder = "INSERT INTO Orrder (Order_ID, Order_Address, Bill, Order_Date, Cus_ID, Qty, Item_ID) " +
+                                        $"VALUES ('{IDgenarate.createID("Order_ID")}', '{comboBoxAddress.SelectedItem}', '{total}', '{dt}', '{cusID}', '{buyQty}', '{itemName}')";
+
+                SqlCommand cmdSaveOrder = new SqlCommand(sqlSaveOrder, con.GetDBconnetion());
+                cmdSaveOrder.ExecuteNonQuery();
+
+
+
+                // Update Stock after purchase success
+                itemQtyLeft = itemQtyLeft - buyQty;
+                string sqUpdateInStock = "UPDATE Items Set " +
+                                            $"Item_Qty = '{itemQtyLeft}' WHERE Item_ID = '{itemName}' ";
+
+                SqlCommand cmdUpdateInStock = new SqlCommand(sqUpdateInStock, con.GetDBconnetion());
+                cmdUpdateInStock.ExecuteNonQuery();
+
+
+
+                //Read ItemQty again to display in labelQty
+                string sqlReadQty = $"SELECT Item_Qty FROM Items WHERE Item_Id = '{itemName}'";
+
+                SqlCommand cmdReadQty = new SqlCommand(sqlReadQty, con.GetDBconnetion());
+                cmdReadQty.ExecuteScalar();
+                labelQtyLeft.Content = cmdReadQty.ExecuteScalar().ToString();
+
                 msgColorFlag = 0;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 msgColorFlag = 1;
                 MessageBox.Show(ex.Message);
             }
         }
+
+        //Validation For textBoxQty
+        public void validateBuyQty() 
+        {
+            //Set Colour to normal if it changed to red in prevoius text changed
+            labelTotal.Foreground = Brushes.Black;
+
+            try
+            {
+                //Validaing the input of textBoxQty
+                if (!String.IsNullOrWhiteSpace(textBoxBuyQty.Text) && textBoxBuyQty.Text.All(char.IsDigit))
+                {
+                    buyQty = Convert.ToInt32(textBoxBuyQty.Text);
+
+                    if (buyQty > 0 && buyQty <= itemQtyLeft)
+                    {
+                        total = buyQty * itemPrice;
+                        labelTotal.Content = "Total: " + total + " LKR";
+                        qtyReady = true;
+                    }
+                    else
+                    {
+                        buyQty = 0;
+                        labelTotal.Foreground = Brushes.Red;
+                        labelTotal.Content = "Invalid Quantity !";
+                        qtyReady = false;
+                    }
+                }
+                else
+                {
+                    buyQty = 0;
+                    labelTotal.Foreground = Brushes.Red;
+                    labelTotal.Content = "Invalid Quantity !";
+                    qtyReady = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         //Button Clicks
         private void buttonPay_Click(object sender, RoutedEventArgs e)
         {
+            validateBuyQty();
+
             //Validating if all required data has inserted
             if (qtyReady == true)
             {
-                if (!String.IsNullOrWhiteSpace(textBoxAddress.Text))
+                if (comboBoxAddress.SelectedIndex != 0)
                 {
                     if (cardNumReady == true && cardExpDateReady == true && cardCvvReady == true)
                     {
@@ -200,33 +265,9 @@ namespace WPFApp_GUI_Project
         //Text Changes
         private void textBoxBuyQty_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (sender is  TextBox) 
+            if (sender is TextBox)
             {
-                //Set Colour to normal if it changed to red in prevoius text changed
-                labelTotal.Foreground = Brushes.Black;
-
-                try
-                {
-                    //Validaing the input of textBoxQty
-                    if (!String.IsNullOrWhiteSpace(textBoxBuyQty.Text) && textBoxBuyQty.Text.All(char.IsDigit) && Convert.ToInt32(textBoxBuyQty.Text) <= itemQtyLeft && Convert.ToInt32(textBoxBuyQty.Text) > 0)
-                    {
-                        buyQty = Convert.ToInt32(textBoxBuyQty.Text);
-                        total = buyQty * itemPrice;
-                        labelTotal.Content = "Total: " + total + " LKR";
-                        qtyReady = true;
-                    }
-                    else
-                    {
-                        buyQty = 0;
-                        labelTotal.Foreground = Brushes.Red;
-                        labelTotal.Content = "Invalid Quantity !";
-                        qtyReady = false;
-                    }
-                }
-                catch (Exception ex) 
-                {
-                    MessageBox.Show(ex.Message);       
-                }
+                validateBuyQty();
             }
         }
 
@@ -294,15 +335,6 @@ namespace WPFApp_GUI_Project
                         cardCvvReady &= false;
                     }
                 }
-            }
-        }
-
-        private void comboBoxAddress_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (comboBoxAddress.SelectedIndex != 0 && sender is ComboBox cmbox) 
-            {
-                textBoxAddress.Text = comboBoxAddress.SelectedItem.ToString();
-                comboBoxAddress.SelectedIndex = 0;
             }
         }
     }
