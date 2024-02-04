@@ -16,6 +16,9 @@
     <Compile Update="AdminUpdateStock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CartQty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CartUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUpdateStock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CartQty.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CartUC.xaml">

@@ -187,7 +187,7 @@ namespace WPFApp_GUI_Project
                     
                     PaymentUC pay = new PaymentUC();
 
-                    pay.setItem(gridName);
+                    pay.setItem(gridName, 1);
 
                     //Display payment usercontrol
                     if (Window.GetWindow(this) is ShoppingWindow shoppingWindow)
@@ -205,8 +205,8 @@ namespace WPFApp_GUI_Project
             {
                 if (clickedButton.Parent is Grid clickedGrid)
                 {
-                    string gridName = clickedGrid.Name;
-                    MessageBox.Show($"Cart button clicked in Grid {gridName}");
+                    CartQty setqty = new CartQty(clickedGrid.Name);
+                    setqty.Show();
                 }
             }
         }

@@ -18,24 +18,26 @@
                 <ScrollViewer Margin="0,101,3,8">
                     <StackPanel x:Name="stackPanelCart" Orientation="Vertical">
 
+                        <!--Used to genarate the cart items 
                         <Grid x:Name="I1" Height="129">
-                            <Border BorderThickness="2" CornerRadius="43" Height="100" Width="641" Margin="0,21,0,0" Background="#FFE2E3DB"/>
-                            <StackPanel Orientation="Horizontal" Margin="0,21,0,-2" Width="632">
-                                <Border BorderBrush="#FF5FEDCB" BorderThickness="2" Width="83" Height="82" CornerRadius="48" Margin="11,0,0,2" VerticalAlignment="Center">
+                            <Border BorderThickness="2" CornerRadius="43" Height="102" Margin="115,24,114,3" Background="#FF7DF1D5"/>
+                            <StackPanel Orientation="Horizontal" Margin="114,21,114,-2">
+                                <Border BorderBrush="#FF5FEDCB" BorderThickness="2" Width="83" Height="82" CornerRadius="48" Margin="17,0,0,2" VerticalAlignment="Center">
                                     <Border.Background>
                                         <ImageBrush ImageSource="/products/I001.jpg"/>
                                     </Border.Background>
                                 </Border>
-                                <Label  Content="Qty 3" Height="38" Margin="30,0,0,0" VerticalAlignment="Center" FontSize="19" Width="66" FontFamily="Calibri"/>
-                                <Label  Content="Total: 6000 LKR" Height="38" Margin="33,0,0,0" VerticalAlignment="Center" FontSize="19" Width="150" FontFamily="Calibri"/>
-                                <Button x:Name="buttonCartBuyNow" Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="35,0,0,0" BorderBrush="Aquamarine" BorderThickness="2" VerticalAlignment="Center" FontSize="18" Background="#FFFDFDFD" FontFamily="Calibri" Click="buttonCartBuyNow_Click"/>
-                                <Button x:Name="buttonCartDelete" Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="50,0,0,0" Click="buttonCartDelete_Click">
+                                <Label  Content="Qty 3" Height="38" Margin="45,0,0,0" VerticalAlignment="Center" FontSize="19" Width="66" FontFamily="Calibri"/>
+                                <Label  Content="Total: 6000 LKR" Height="38" Margin="45,0,0,0" VerticalAlignment="Center" FontSize="19" Width="150" FontFamily="Calibri"/>
+                                <Button x:Name="buttonCartBuyNow" Style="{StaticResource RoundedButtonStyle}" Content="Buy Now" Height="37" Width="115" Margin="50,0,0,0" BorderBrush="Aquamarine" BorderThickness="2" VerticalAlignment="Center" FontSize="18" Background="#FFFDFDFD" FontFamily="Calibri" Click="buttonCartBuyNow_Click"/>
+                                <Button x:Name="buttonCartDelete" Style="{StaticResource RoundedButtonStyle}" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="48" Margin="68,0,0,0" Click="buttonCartDelete_Click">
                                     <StackPanel Orientation="Horizontal" Width="55">
-                                        <Image Source="/Icons/delete.png" Width="37" Height="52"/>
+                                        <Image Source="/Icons/delete.png" Width="38" Height="54"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>
                         </Grid>
+                        -->
                     </StackPanel>
                 </ScrollViewer>
             </Grid>

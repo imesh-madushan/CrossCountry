@@ -39,6 +39,9 @@ namespace WPFApp_GUI_Project
         bool cardCvvReady = false;
         bool qtyReady = false;
 
+        public bool isCartPay = false;
+        private string cartID = "";
+
         string paymentMsg;
         int msgColorFlag = -1;
 
@@ -47,9 +50,15 @@ namespace WPFApp_GUI_Project
         {
             InitializeComponent();
         }
+        // If cartPay set cartID
+        public void setCartID(string cartID)
+        { 
+            isCartPay = true;
+            this.cartID = cartID;
+        }
 
         //Set Items to display
-        public void setItem(string itemID)
+        public void setItem(string itemID, int defQty)
         {
             itemName = itemID;
 
@@ -70,7 +79,7 @@ namespace WPFApp_GUI_Project
 
                 labelQtyLeft.Content = itemQtyLeft + " Left";
                 labelTotal.Content = "Total: " + itemPrice + " LKR";
-                textBoxBuyQty.Text = "1";
+                textBoxBuyQty.Text = Convert.ToString(defQty);
 
                 setComboBoxAddress();
             }
@@ -120,6 +129,15 @@ namespace WPFApp_GUI_Project
                 cmdSaveOrder.ExecuteNonQuery();
 
 
+                // If Cart pay is true, delete cart from Cart table
+                string sqlDeleteCart = $"DELETE FROM Cart WHERE Cart_ID = '{cartID}'";
+                if (isCartPay == true)
+                {
+                    // Delete cart from Database
+                    SqlCommand cmdDeleteCart = new SqlCommand(sqlDeleteCart, con.GetDBconnetion());
+                    cmdDeleteCart.ExecuteNonQuery();
+                }
+
 
                 // Update Stock after purchase success
                 itemQtyLeft = itemQtyLeft - buyQty;
@@ -138,6 +156,12 @@ namespace WPFApp_GUI_Project
                 cmdReadQty.ExecuteScalar();
                 labelQtyLeft.Content = cmdReadQty.ExecuteScalar().ToString();
 
+                // Resetting all filled details
+                textBoxBuyQty.Text = "1";
+                comboBoxAddress.SelectedIndex = 0;
+                textBoxCardNum.Text = String.Empty;
+                textBoxExp.Text = String.Empty;
+                textBoxCvv.Text = String.Empty;
                 msgColorFlag = 0;
             }
             catch (Exception ex)
