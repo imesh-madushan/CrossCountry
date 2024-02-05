@@ -32,12 +32,13 @@ namespace WPFApp_GUI_Project
             LoadDefault();
 
         }
+
         public void LoadDefault()
         {
             labelProfileUsername.Content = loggedUsername;
 
             ShoppingUC shoppingUC = new ShoppingUC();
-            shoppingUC.Creater("customer");
+            shoppingUC.setloginType("customer");
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(shoppingUC);
         }

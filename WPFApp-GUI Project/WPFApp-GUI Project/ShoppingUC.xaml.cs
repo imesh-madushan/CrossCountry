@@ -22,7 +22,7 @@ namespace WPFApp_GUI_Project
     public partial class ShoppingUC : UserControl
     {
         //admin or customer
-        string type;
+        private string loginTtype;
         CreateDBconnection getconobj = new CreateDBconnection();
 
         public ShoppingUC()
@@ -30,9 +30,9 @@ namespace WPFApp_GUI_Project
             InitializeComponent();
         }
 
-        public void Creater(string userType)
+        public void setloginType(string userType)
         {
-            type = userType;
+            loginTtype = userType;
             ReadDBItemData();
         }
         private void ReadDBItemData()
@@ -158,11 +158,11 @@ namespace WPFApp_GUI_Project
                 itemGrid.Children.Add(qtyLable);
                 
 
-                if (type == "admin")
+                if (loginTtype == "admin")
                 {
                     itemImage.Margin = new(0,46,0,0);
                 }
-                else if (type == "customer")
+                else if (loginTtype == "customer")
                 {
                     itemGrid.Children.Add(buyNowButton);
                     itemGrid.Children.Add(addToCartButton);

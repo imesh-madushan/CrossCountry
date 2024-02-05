@@ -43,7 +43,7 @@
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
-                            <Button BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="CONFIRM" Style="{StaticResource RoundedButtonStyle}" Width="170" Margin="0,-31,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="20" HorizontalAlignment="Center" Height="47" MouseEnter="ButtonConfirm_MouseEnter" MouseLeave="ButtonConfirm_MouseLeave"/>
+                            <Button BorderBrush="Aquamarine" BorderThickness="1.8" Background="#FFFFB835" Content="CONFIRM" Style="{StaticResource RoundedButtonStyle}" Width="170" Margin="0,-31,0,0" FontFamily="Segoe UI Variable Small Semibold" FontSize="20" HorizontalAlignment="Center" Height="47" MouseEnter="ButtonConfirm_MouseEnter" MouseLeave="ButtonConfirm_MouseLeave" Click="Button_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>

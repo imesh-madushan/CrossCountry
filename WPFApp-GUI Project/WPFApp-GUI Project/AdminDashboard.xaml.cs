@@ -19,18 +19,26 @@ namespace WPFApp_GUI_Project
     /// </summary>
     public partial class AdminDashboard : Window
     {
-        string itemName = "I003";
-        int itemQty = 23;
+        private static string loggedAdminUsername;
+        private static string loggedAdminID;
+        
         public AdminDashboard()
         {
             InitializeComponent();
             LoadDefault();
         }
 
+        public static void SetLoggedAdminDetail(string username, string userID)
+        {
+            loggedAdminUsername = username;
+            loggedAdminID = userID;
+        }
+
         //Button Click
 
         public void LoadDefault()
         {
+            labelAdminUsername.Content = loggedAdminUsername;
             AdminUpdateStock adminUpdateStock = new AdminUpdateStock();
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(adminUpdateStock);
@@ -45,7 +53,7 @@ namespace WPFApp_GUI_Project
         {
             
             ShoppingUC shoppingUC = new ShoppingUC();
-            shoppingUC.Creater("admin");
+            shoppingUC.setloginType("admin");
             ContentDisplay.Children.Clear();
             ContentDisplay.Children.Add(shoppingUC);
         }

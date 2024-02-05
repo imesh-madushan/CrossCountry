@@ -20,16 +20,23 @@ namespace WPFApp_GUI_Project
     public partial class MainWindow : Window
     {
         CreateDBconnection con = new CreateDBconnection();
+        private string loginType = "";
 
+        private string cusID;
+        private int cusAvailability = -1;
+
+        private string adminID;
+        private int adminAvailability = -1;
+        
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        // Validating Login info of Customer
         private void UserValidating(string username, string password)
         {
-            int cusAvailability = 999;
-            string cusID;
+            
 
             try
             {   
@@ -46,22 +53,44 @@ namespace WPFApp_GUI_Project
                     string sqlgetid = $"SELECT Cus_Id FROM Customer WHERE Cus_Username = '{username}' AND Cus_Password = '{password}'";
                     SqlCommand cmdgetid = new SqlCommand(sqlgetid, con.GetDBconnetion());
                     cusID = cmdgetid.ExecuteScalar().ToString();
-
-                    //Store logged user details in Shopping window
-                    ShoppingWindow.SetLoggedUserDetail(username, cusID);
-
-                    //Opening Shopping window after succesful login
-                    ShoppingWindow spwindow = new ShoppingWindow();
-                    spwindow.Show();
-                    
-                    this.Close();
                 }
                 else
                 {
-                    lableLoginValidate.Content = "Invalid Login !";
+                    lableLoginValidate.Content = "Invalid User Login !";
                 }
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Validating Login info of Admin
+        private void AdminValidating(string username, string password)
+        {
+
+
+            try
+            {
+                //Check for username and password match
+                string sqlcheck = $"SELECT COUNT(*) FROM Admin WHERE Admin_Username = '{username}' AND Admin_Password = '{password}'";
+                SqlCommand cmdcheck = new SqlCommand(sqlcheck, con.GetDBconnetion());
+                adminAvailability = Convert.ToInt32(cmdcheck.ExecuteScalar());
+
+                //If one result was found after ExecuteScalar
+                if (adminAvailability == 1)
+                {
+                    //Get ther Cus_ID from that user 
+                    string sqlgetid = $"SELECT Admin_ID FROM Admin WHERE Admin_Username = '{username}' AND Admin_Password = '{password}'";
+                    SqlCommand cmdgetid = new SqlCommand(sqlgetid, con.GetDBconnetion());
+                    adminID = cmdgetid.ExecuteScalar().ToString();
+                }
+                else
+                {
+                    lableLoginValidate.Content = "Invalid Admin Login !";
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -75,6 +104,18 @@ namespace WPFApp_GUI_Project
                 string username = TextBoxUsername.Text;
                 string password = PasswordBoxPassword.Password;
                 UserValidating(username, password);
+
+                if (cusAvailability == 1)
+                {
+                    //Store logged user details in Shopping window
+                    ShoppingWindow.SetLoggedUserDetail(username, cusID);
+
+                    //Opening Shopping window after succesful login
+                    ShoppingWindow spwindow = new ShoppingWindow();
+                    spwindow.Show();
+
+                    this.Close();
+                }
             }
             else
             {
@@ -91,9 +132,28 @@ namespace WPFApp_GUI_Project
         }
         private void ButtonAdminLogin_Click(object sender, RoutedEventArgs e)
         {
-            AdminLoginWindow windowCall = new AdminLoginWindow();
-            windowCall.Show();
-            this.Close();
+            if (!String.IsNullOrWhiteSpace(TextBoxUsername.Text) && !String.IsNullOrWhiteSpace(PasswordBoxPassword.Password))
+            {
+                string username = TextBoxUsername.Text;
+                string password = PasswordBoxPassword.Password;
+                AdminValidating(username, password);
+
+                if (adminAvailability == 1)
+                {
+                    //Store logged Admin details in Shopping window
+                    AdminDashboard.SetLoggedAdminDetail(username, adminID);
+
+                    //Opening Admin Dashboard window after succesful login
+                    AdminDashboard adminDashboard = new AdminDashboard();
+                    adminDashboard.Show();
+
+                    this.Close();
+                }
+            }
+            else
+            {
+                lableLoginValidate.Content = "Invalid Admin Login !";
+            }
         }
 
 
