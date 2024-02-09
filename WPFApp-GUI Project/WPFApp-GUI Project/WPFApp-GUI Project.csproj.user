@@ -10,9 +10,6 @@
     <Compile Update="AdminDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AdminLoginWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="AdminUpdateStock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,9 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminDashboard.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="AdminLoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AdminUpdateStock.xaml">
