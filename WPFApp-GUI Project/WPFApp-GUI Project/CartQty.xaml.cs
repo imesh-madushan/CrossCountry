@@ -158,5 +158,10 @@ namespace WPFApp_GUI_Project
                 }
             }
         }
+
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -53,10 +53,20 @@
             <Grid Grid.Column="1">
 
                 <Grid x:Name="ContentDisplay">
-                    
+
                 </Grid>
 
             </Grid>
+            <Button x:Name="buttonClose" Content=""  Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,13,22,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonClose_Click" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/close-button.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="buttonMinimize" Content="" Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,14,64,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonMinimize_Click" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/minimize1.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
         </Grid>
     </Border>
 </Window>

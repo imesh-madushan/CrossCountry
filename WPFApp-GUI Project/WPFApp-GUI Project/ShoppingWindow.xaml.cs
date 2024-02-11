@@ -91,6 +91,16 @@ namespace WPFApp_GUI_Project
             this.Close();
         }
 
+        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         //Mouse Enter Leave Animations
         private void ButtonLogOut_MouseEnter(object sender, MouseEventArgs e)
         {

@@ -36,8 +36,6 @@ namespace WPFApp_GUI_Project
         // Validating Login info of Customer
         private void UserValidating(string username, string password)
         {
-            
-
             try
             {   
                 //Check for username and password match
@@ -99,6 +97,7 @@ namespace WPFApp_GUI_Project
         //Buton Clicks
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
+            // Check if input are not null 
             if (!String.IsNullOrWhiteSpace(TextBoxUsername.Text) && !String.IsNullOrWhiteSpace(PasswordBoxPassword.Password))
             {
                 string username = TextBoxUsername.Text;
@@ -119,6 +118,7 @@ namespace WPFApp_GUI_Project
             }
             else
             {
+                //Set error message if username and password are not matched
                 lableLoginValidate.Content = "Username or Password cannot be empty !";
             }            
         }
@@ -126,12 +126,14 @@ namespace WPFApp_GUI_Project
 
         private void ButtonRegistor_Click(object sender, RoutedEventArgs e)
         {
+            //Go to the register window
             RegisterWindow windowCaller = new RegisterWindow();
             windowCaller.Show();
             this.Close();
         }
         private void ButtonAdminLogin_Click(object sender, RoutedEventArgs e)
         {
+            // Check if the inputs are not null
             if (!String.IsNullOrWhiteSpace(TextBoxUsername.Text) && !String.IsNullOrWhiteSpace(PasswordBoxPassword.Password))
             {
                 string username = TextBoxUsername.Text;
@@ -152,6 +154,7 @@ namespace WPFApp_GUI_Project
             }
             else
             {
+                //Set error message if username and password are not matched
                 lableLoginValidate.Content = "Invalid Admin Login !";
             }
         }
@@ -160,6 +163,7 @@ namespace WPFApp_GUI_Project
         //Mouse Enter and Leave
         private void ButtonLogin_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Change the color of button
             if (sender is Button button)
             {
                 button.Background = Brushes.Black ;
@@ -169,6 +173,7 @@ namespace WPFApp_GUI_Project
 
         private void ButtonLogin_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Reset the color of button
             if (sender is Button button)
             {
                 button.Background = Brushes.White;
@@ -178,6 +183,7 @@ namespace WPFApp_GUI_Project
 
         private void ButtonRegistor_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Change the color of button
             if (sender is Button button)
             {
                 button.Background = Brushes.Black;
@@ -187,6 +193,7 @@ namespace WPFApp_GUI_Project
 
         private void ButtonRegistor_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Reset the color of button
             if (sender is Button button)
             {
                 button.Background = Brushes.White;
@@ -196,6 +203,7 @@ namespace WPFApp_GUI_Project
 
         private void TextBoxUsername_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Change the color of ther boder of textbox
             if (sender is TextBox textbox)
             {
                 textbox.BorderBrush = Brushes.MediumBlue;
@@ -204,6 +212,7 @@ namespace WPFApp_GUI_Project
 
         private void TextBoxUsername_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Reset the color of ther boder of textbox
             if (sender is TextBox textbox)
             {
                 textbox.BorderBrush = Brushes.White;
@@ -225,11 +234,11 @@ namespace WPFApp_GUI_Project
                 pbox.BorderBrush = Brushes.White;
             }
         }
-
         
 
         private void ButtonAdminLogin_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Change the color of button
             if (sender is Button button)
             {
                 button.BorderBrush = Brushes.Black;
@@ -240,6 +249,7 @@ namespace WPFApp_GUI_Project
 
         private void ButtonAdminLogin_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Reset the color of button
             if (sender is Button button)
             { 
                 button.BorderBrush = new SolidColorBrush(Color.FromArgb(255, 41, 24, 112));
@@ -252,6 +262,16 @@ namespace WPFApp_GUI_Project
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             lableLoginValidate.Content = string.Empty;
+        }
+
+        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -23,6 +23,12 @@
                 <Label x:Name="labelTotal" HorizontalContentAlignment="Center" Content="Total: 00000 LKR" Height="38" Margin="0,40,0,0" FontSize="20" Width="194" FontFamily="Franklin Gothic Medium Cond"/>
             </StackPanel>
             <Button x:Name="buttonSubmit" HorizontalContentAlignment="Center" Content="CONFIRM" Style="{StaticResource RoundedButtonStyle}"  Background="#FF5FEDCB" BorderBrush="{x:Null}" FontSize="13" FontFamily="Segoe UI Variable Small Semibold" Click="buttonSubmit_Click" Margin="99,12,99,0" Grid.Row="1" Height="39" VerticalAlignment="Top"/>
+
+            <Button x:Name="buttonClose" Content=""  Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,6,11,0" VerticalAlignment="Top" Height="18" HorizontalAlignment="Right" Width="18" Click="buttonClose_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/close-button.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
         </Grid>
 
     </Border>

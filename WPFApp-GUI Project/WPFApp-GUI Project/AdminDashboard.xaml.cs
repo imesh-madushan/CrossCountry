@@ -58,6 +58,16 @@ namespace WPFApp_GUI_Project
             ContentDisplay.Children.Add(shoppingUC);
         }
 
+        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void ButtonUpdateStock_Click(object sender, RoutedEventArgs e)
         {
             LoadDefault();

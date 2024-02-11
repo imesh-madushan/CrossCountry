@@ -34,7 +34,7 @@ namespace WPFApp_GUI_Project
         private string responsePass;
 
         private bool usernameReady = false;
-        private bool passwordReady =false;
+        private bool passwordReady = false;
         private bool addressReady = false;
 
         CreateDBconnection con = new CreateDBconnection();
@@ -59,7 +59,7 @@ namespace WPFApp_GUI_Project
                 //Check if new Username is enterd by user.
                 if (!String.IsNullOrWhiteSpace(textBoxUsername.Text) && textBoxUsername.Text != oldUserName)
                 {
-                    //Check for Password length to be more than 8 characters
+                    //Check for Username length to be more than 8 characters
                     if (textBoxUsername.Text.Length >= 8)
                     {
                         SqlCommand cmdCheckUsername = new SqlCommand(sqlUsernameRead, con.GetDBconnetion());
@@ -117,7 +117,7 @@ namespace WPFApp_GUI_Project
                     if (!String.IsNullOrWhiteSpace(textBoxPasswordOld.Text))
                     {
                         Flag = 1;
-                        responseFail += "\nTo pdate Password please fill the New Password feild too !\n";
+                        responseFail += "\nTo update Password please fill the New Password feild too !\n";
                     }
                 }
 

@@ -9,8 +9,7 @@
         Background="{x:Null}"
         WindowStartupLocation="CenterScreen"
         Title="MsgWindow" Height="283" Width="303" WindowStyle="None" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-    <Border Background="White" CornerRadius="10">
-        
+    <Border Background="White"  BorderThickness="5" BorderBrush="#FF38DFB7" CornerRadius="10">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="135*"/>
@@ -18,8 +17,13 @@
             </Grid.RowDefinitions>
 
             <TextBox  x:Name="textBoxMsg" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="Notification Messsage will display"  TextWrapping="Wrap" FontFamily="Segoe UI Variable Display" BorderBrush="{x:Null}" IsReadOnly="True" Focusable="False" IsHitTestVisible="False" Margin="10,34,10,15"/>
-            <Button x:Name="buttonSubmit" HorizontalContentAlignment="Center" Content="OK" Style="{StaticResource RoundedButtonStyle}"  Background="#FF5FEDCB" BorderBrush="{x:Null}" FontSize="13" FontFamily="Segoe UI Variable Small Semibold" Click="buttonSubmit_Click" Margin="82,12,82,0" Grid.Row="1" Height="39" VerticalAlignment="Top"/>
+            <Button x:Name="buttonSubmit" HorizontalContentAlignment="Center" Content="OK" Style="{StaticResource RoundedButtonStyle}"  Background="#FF5FEDCB" BorderBrush="{x:Null}" FontSize="13" FontFamily="Segoe UI Variable Small Semibold" Click="buttonSubmit_Click" Margin="82,10,82,0" Grid.Row="1" Height="39" VerticalAlignment="Top"/>
+
+            <Button x:Name="buttonClose" Content=""  Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,6,11,0" VerticalAlignment="Top" Height="18" HorizontalAlignment="Right" Width="18" Click="buttonClose_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/close-button.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
         </Grid>
-        
     </Border>
 </Window>

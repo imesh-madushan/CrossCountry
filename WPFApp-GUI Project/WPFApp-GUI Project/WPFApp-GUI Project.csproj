@@ -48,6 +48,8 @@
     <None Remove="Icons\minimize %283%29.png" />
     <None Remove="Icons\minimize %284%29.png" />
     <None Remove="Icons\minimize.png" />
+    <None Remove="Icons\minimize1.png" />
+    <None Remove="Icons\minimize2.png" />
     <None Remove="Icons\minus.png" />
     <None Remove="Icons\settings-menu.png" />
     <None Remove="Icons\settings-menu2.png" />
@@ -170,6 +172,8 @@
     <Resource Include="Icons\minimize (3).png" />
     <Resource Include="Icons\minimize (4).png" />
     <Resource Include="Icons\minimize.png" />
+    <Resource Include="Icons\minimize1.png" />
+    <Resource Include="Icons\minimize2.png" />
     <Resource Include="Icons\minus.png" />
     <Resource Include="Icons\settings-menu.png" />
     <Resource Include="Icons\settings-menu2.png" />
