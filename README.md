@@ -1,4 +1,4 @@
-# CrossCountry
+# CrossCountry <img align="center" src="https://raw.githubusercontent.com/imesh927/CrossCountry/master/WPFApp-GUI%20Project/Icons/crosscountryround.png" width="42" height="42"/>
 
 _A Shoe Selling Application (desktop)_, built with **C# .NET**, is designed to offer an engaging and user-friendly shoe shopping experience.
 
@@ -36,7 +36,7 @@ _A Shoe Selling Application (desktop)_, built with **C# .NET**, is designed to o
 >**NOTE**:
 
 >This programm only contains limited numberof samples shoes.
-If you  wish to add more custom shoes you need upload images to `WPFApp-GUI Project/products`, and also add that item to database with manual prodocut id and other data.
+If you  wish to add more custom shoes you need upload images to [`WPFApp-GUI Project/products`](WPFApp-GUI%20Project/products), and also add that item to database with manual prodocut id and other data.
 
 >Admins accounts are created by database query manually.
 
