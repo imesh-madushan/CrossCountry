@@ -1,0 +1,53 @@
+﻿<Window x:Class="WPFApp_GUI_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="640" Width="930"
+        MaxHeight="700" MaxWidth="1060"
+        MinHeight="598" MinWidth="905"
+        Background="{x:Null}"  WindowStartupLocation="CenterScreen" WindowStyle="None" UseLayoutRounding="False" AllowsTransparency="True">
+
+    <Border CornerRadius="30" Background="White">
+        <Grid>
+            <Grid >
+                <Border CornerRadius="30" HorizontalAlignment="Right" Width="526">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2CBA8C"/>
+                            <GradientStop Color="#FF7E89C5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Grid HorizontalAlignment="Left" Width="468" Margin="30,85,0,0">
+                        <Button x:Name="ButtonRegistor" Content="Registor" Style="{StaticResource RoundedButtonLogStyle}" Margin="232,351,0,0" Background="White" Foreground="Black" FontSize="33" FontFamily="Calibri" FontWeight="Bold" Click="ButtonRegistor_Click" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160" BorderBrush="{x:Null}" MouseEnter="ButtonRegistor_MouseEnter" MouseLeave="ButtonRegistor_MouseLeave" />
+                        <Button x:Name="ButtonLogin" Content="Login" Style="{StaticResource RoundedButtonLogStyle}" Margin="232,201,0,0" Background="White" Foreground="Black" FontSize="33" FontFamily="Calibri" FontWeight="Bold" Click="ButtonLogin_Click" HorizontalAlignment="Left" Width="160" BorderBrush="{x:Null}" MouseEnter="ButtonLogin_MouseEnter" MouseLeave="ButtonLogin_MouseLeave" Height="50" VerticalAlignment="Top" />
+                        <Label  Content="Username" HorizontalAlignment="Left" FontSize="33" FontWeight="Bold" Width="159" Height="85" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" Margin="4,18,0,0"/>
+                        <Label  Content="Password" HorizontalAlignment="Left" Margin="6,92,0,0" FontSize="33" FontWeight="Bold" Width="143" Height="85" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri"/>
+                        <Label  Content="OR" Margin="284,299,0,0" FontSize="33" FontWeight="Bold" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54" Foreground="White" FontFamily="Calibri"/>
+                        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="TextBoxUsername" Style="{StaticResource RoundTextBoxLogStyle}" Margin="182,24,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="270" Height="50" VerticalAlignment="Top" FontSize="27" FontFamily="Arial" MouseEnter="TextBoxUsername_MouseEnter" BorderBrush="White" MouseLeave="TextBoxUsername_MouseLeave" TextChanged="TextBox_TextChanged"/>
+                        <PasswordBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="PasswordBoxPassword" Style="{StaticResource RoundedPasswordBoxLogStyle}" HorizontalAlignment="Left" Margin="182,91,0,0" VerticalAlignment="Top" Width="270" Height="50" FontSize="27" FontFamily="Arial" BorderBrush="White" MouseEnter="PasswordBoxPassword_MouseEnter" MouseLeave="PasswordBoxPassword_MouseLeave"/>
+                        <Button x:Name="ButtonAdminLogin" Content="Admin Login" Style="{StaticResource RoundedButtonLogStyle}" Margin="213,0,0,25" Background="{x:Null}" Foreground="#FF491E89" FontSize="24" FontFamily="Cascadia Mono SemiLight" BorderBrush="#FF291870" Click="ButtonAdminLogin_Click" HorizontalAlignment="Left" Width="196" Height="47" VerticalAlignment="Bottom" MouseEnter="ButtonAdminLogin_MouseEnter" MouseLeave="ButtonAdminLogin_MouseLeave"/>
+                        <Label x:Name="lableLoginValidate" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="" Margin="183,141,0,0" FontSize="15" FontWeight="Bold" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="269" Foreground="Red" FontFamily="Bodoni MT" Background="{x:Null}"/>
+                    </Grid>
+
+                </Border>
+            </Grid>
+            <Grid>
+                <Border CornerRadius="290" HorizontalAlignment="Left" Margin="10,0,0,-28" Width="453" Height="453" VerticalAlignment="Bottom">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Icons/logo.jpg"/>
+                    </Border.Background>
+                </Border>
+                <Button x:Name="buttonClose" Content=""  Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,13,27,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonClose_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/close-button.png" Opacity="0.85"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="buttonMinimize" Content="" Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,14,69,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonMinimize_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/minimize1.png" Opacity="0.85"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

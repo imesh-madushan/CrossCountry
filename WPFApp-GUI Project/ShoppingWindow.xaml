@@ -1,0 +1,85 @@
+﻿<Window x:Class="WPFApp_GUI_Project.ShoppingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp_GUI_Project"
+        mc:Ignorable="d"
+        Title="Dashboard"
+        ResizeMode="CanResize"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Height="732" Width="1128" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+
+    <Border Background="White" CornerRadius="20" Margin="0,0,0,0">
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="borderSideBar" CornerRadius="20,8,8,20">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2CBA8C"/>
+                            <GradientStop Color="#FF7E89C5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <Image x:Name="imageProfile" Margin="22, 31, 10, -7" Source="/Icons/user-profile.png" VerticalAlignment="top" HorizontalAlignment="Left" Width="64" Height="64"/>
+                            <Label x:Name="labelProfileUsername" Margin="18,14,14,14" HorizontalAlignment="Center"  Content="Username" Width="133" FontSize="16" FontFamily="Segoe UI Variable Small Semibold" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel x:Name="sideBarWrapPanel" Orientation="Vertical" Margin="0,145,0,59">
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonDashboard" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonDashboard_Click">
+                                <StackPanel Orientation="Horizontal" Width="141">
+                                    <Image x:Name="imgDashboardBtn" Source="/Icons/shopping-menu.png" Width="30" Margin="13,0,16,0"/>
+                                    <TextBlock x:Name="textDashboardBtn" Text="Shopping" FontSize="17" Width="78" Height="26" FontFamily="Segoe UI Variable Small Semibold" Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonProfileSetting" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonProfileSetting_Click">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgSettingsBtn" Source="/Icons/settings-menu.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textSettingsBtn" Text="Settings" FontSize="17" Width="65" Height="26" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonHistory" Background="{x:Null}" Height="48" BorderBrush="{x:Null}"  Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonHistory_Click">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgHistoryBtn" Source="/Icons/history-menu.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textHistoryBtn" Text="History" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource RoundedButtonStyle}" x:Name="ButtonCart" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Width="158" Margin="-7,15,0,0" MouseEnter="ButtonSidebarAny_MouseEnter" MouseLeave="ButtonSidebarAny_MouseLeave" Click="ButtonCart_Click">
+                                <StackPanel Orientation="Horizontal" Width="113">
+                                    <Image x:Name="imgCartBtn" Source="/Icons/cart-menu.png" Width="30" Margin="0,0,16,0"/>
+                                    <TextBlock x:Name="textCartBtn" Text="Cart" FontSize="17" Width="65" Height="25" FontFamily="Segoe UI Variable Small Semibold"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <Button x:Name="buttonLogOut" Style="{StaticResource RoundedButtonStyle}" VerticalAlignment="Bottom" Background="{x:Null}" Height="48" BorderBrush="{x:Null}" Margin="-3,5,6,12" MouseEnter="ButtonLogOut_MouseEnter" MouseLeave="ButtonLogOut_MouseLeave" Click="buttonLogOut_Click">
+                            <StackPanel Orientation="Horizontal" Width="113">
+                                <Image x:Name="imgLogOutBtn" Source="/Icons/logout.png" Width="30" Margin="0,0,10,0"/>
+                                <TextBlock x:Name="textLogoutBtn" Text="Logout" FontSize="17" Width="65" Height="29" FontFamily="Segoe UI Variable Small Semibold"/>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!--Use to Display Other windows-->
+            <Grid x:Name="ContentDisplay" Margin="163,0,0,0"></Grid>
+            <Button x:Name="buttonClose" Content=""  Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,13,27,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonClose_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/close-button.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="buttonMinimize" Content="" Style="{StaticResource RoundedButtonStyle}" BorderBrush="{x:Null}" Margin="0,14,69,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Right" Width="26" Click="buttonMinimize_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/minimize1.png" Opacity="0.85"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Border>
+</Window>
