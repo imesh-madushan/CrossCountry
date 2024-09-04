@@ -2,7 +2,6 @@
 
 _A Shoe Selling Application (desktop)_, built with **C# .NET**, is designed to offer an engaging and user-friendly shoe shopping experience.
 
->It’s a project created to achive my acedemic goals and enhance my development and design skills.
 
 ### Features
 - **User Registration & Login**: Securely register and log in to your account.
@@ -43,16 +42,9 @@ If you  wish to add more custom shoes you need upload images to [`WPFApp-GUI Pro
 - **For Customers**: Register or log in to browse shoes, add them to your cart, and proceed to checkout. Manage your shipping addresses and view your order history.
 - **For Admins**: Log in through the admin interface to update stock and manage inventory.
 
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
-
 ### Acknowledgments
 
 - [Microsoft](https://www.microsoft.com/) for providing the .NET framework.
 - [Visual Studio](https://visualstudio.microsoft.com/) for an excellent development environment.
 - [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) for database management.
 
----
-
-Thank you !
