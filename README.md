@@ -1,6 +1,6 @@
 # CrossCountry <img align="center" src="https://raw.githubusercontent.com/imesh927/CrossCountry/master/WPFApp-GUI%20Project/Icons/crosscountryround.png" width="42" height="42"/>
 
-_A Shoe Selling Application (desktop)_, built with **C# .NET**, is designed to offer an engaging and user-friendly shoe shopping experience.
+_A user friendly shoe shopping platform (desktop)_, built with **C# .NET**, is designed to offer an engaging and user-friendly shoe shopping experience.
 
 
 ### Features
