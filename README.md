@@ -2,6 +2,7 @@
 
 _A user friendly shoe shopping platform (desktop)_, built with **C# .NET**, is designed to offer an engaging and user-friendly shoe shopping experience.
 
+Demo: [https://youtu.be/qV-U8B-9EFA](https://youtu.be/qV-U8B-9EFA) 
 
 ### Features
 - **User Registration & Login**: Securely register and log in to your account.
@@ -47,4 +48,3 @@ If you  wish to add more custom shoes you need upload images to [`WPFApp-GUI Pro
 - [Microsoft](https://www.microsoft.com/) for providing the .NET framework.
 - [Visual Studio](https://visualstudio.microsoft.com/) for an excellent development environment.
 - [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) for database management.
-
